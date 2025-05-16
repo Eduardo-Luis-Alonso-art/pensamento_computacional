@@ -151,20 +151,28 @@ header nav ul li a:hover::after {
     margin-bottom: 15px;
 }
 
-/* Imagens grandes e coladas */
 .ano-galeria img {
     position: relative;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    cursor: pointer;
     margin-top: 20px;
     width: 100%;
     aspect-ratio: 1 / 1;
     overflow: hidden;
-    transition: transform .3s ease, box-shadow .3s ease;
+    transform: scale(0.8); /* Inicia com a imagem minimizada */
+    opacity: 0.3; /* Torna a imagem menos visível inicialmente */
+    transition: transform 0.8s ease-out, opacity 0.8s ease-out; /* Suaviza a animação */
     z-index: 1;
     border-radius: 10px;
 }
+
+.ano-galeria img.active {
+    transform: scale(1); /* Imagem fica em tamanho normal */
+    opacity: 1; /* Torna a imagem totalmente visível */
+}
+
 
 .ano-galeria img:hover {
     transform: scale(1.02);
