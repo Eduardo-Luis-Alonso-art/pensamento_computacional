@@ -50,7 +50,7 @@ header nav ul li a {
     text-decoration: none;
     font-weight: bold;
     text-transform: uppercase;
-    font-size: 14px;
+    font-size: 16px;
     padding-bottom: 5px;
 }
 
@@ -187,14 +187,16 @@ header nav ul li a:hover::after {
 }
 
 .depoimento {
-    display: flex; /* Usando Flexbox para alinhar a foto à esquerda e o depoimento à direita */
-    align-items: center; /* Alinha os itens verticalmente */
+    display: flex;
+    flex-direction: column; /* empilha verticalmente */
+    align-items: center; /* centraliza tudo */
     background-color: orange;
     padding: 30px 20px;
     border-radius: 8px;
     margin-bottom: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
+    text-align: center;
 }
 
 .depoimento:hover {
@@ -204,16 +206,22 @@ header nav ul li a:hover::after {
 .depoimento p {
     font-size: 20px;
     color: #000;
-    margin-bottom: 10px;
-    flex: 1; /* Faz com que o depoimento ocupe o restante do espaço disponível */
-    padding-left: 20px; /* Adiciona um espaço entre o texto e a imagem */
+    margin-top: 20px;
+    font-style: italic;
+    max-width: 700px;
 }
 
 .depoimento img {
-    width: 150px; /* Ajusta o tamanho da imagem */
-    height: 150px; /* Mantém a altura da imagem proporcional */
-    border-radius: 50%; /* Deixa a imagem circular */
-    margin-right: 20px; /* Espaço entre a imagem e o texto */
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.depoimento h3 {
+    font-size: 22px;
+    margin: 10px 0 0;
+    color: #000;
 }
 
 .titulo-depoimentos{
