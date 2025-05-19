@@ -5,7 +5,7 @@ body {
     background-color: #f4f4f4;
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Garante que o conteúdo ocupe toda a altura da tela */
+    min-height: 100vh;
 }
 
 header {
@@ -23,7 +23,7 @@ header {
 
 header .logo-unifil img {
     height: 95px;
-    width: auto; /* Ajusta automaticamente a largura para manter a proporção */
+    width: auto;
 }
 
 header nav {
@@ -84,27 +84,26 @@ header nav ul li a:hover::after {
     max-width: 85%;
     margin-left: auto;
     margin-right: auto;
-    transition: all 0.3s ease; /* Adiciona transição suave */
+    transition: all 0.3s ease;
 }
 
-/* Efeito hover na caixa */
 .pensamento-box:hover {
-    background-color: orange; /* Cor levemente mais escura ao passar o mouse */
-    transform: scale(1.02);    /* Aumenta levemente a caixa */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra mais intensa */
+    background-color: orange; 
+    transform: scale(1.02); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .pensamento-box h2 {
-    font-size: 40px; /* Tamanho da fonte para o título */
-    color: #000; /* Cor do título */
-    margin-bottom: 30px; /* Espaço abaixo do título */
+    font-size: 40px; 
+    color: #000;
+    margin-bottom: 30px;
 }
 
 .pensamento-box p {
-    font-size: 24px; /* Tamanho da fonte para o texto */
-    color: #000; /* Cor do texto */
-    line-height: 1.6; /* Aumenta o espaçamento entre as linhas */
-    text-align: justify; /* Justifica o texto */
+    font-size: 24px;
+    color: #000;
+    line-height: 1.6;
+    text-align: justify;
     padding: 0px 20px 20px 20px;
 }
 
@@ -116,7 +115,7 @@ header nav ul li a:hover::after {
 
 #fotos {
     background-color: #f4f4f4;
-    padding: 40px 10px; /* Reduzido nas laterais */
+    padding: 40px 10px;
     text-align: center;
 }
 
@@ -126,7 +125,6 @@ header nav ul li a:hover::after {
     margin-bottom: 70px;
 }
 
-/* Grid de 3 colunas largas e próximas das bordas */
 .galeria-grid {
     display: flex;
     justify-content: space-between;
@@ -134,15 +132,14 @@ header nav ul li a:hover::after {
     gap: 20px;
     max-width: 100%;
     margin: 0 auto;
-    padding: 0 10px; /* Menor margem lateral interna */
+    padding: 0 10px;
 }
 
-/* Cada coluna do ano */
 .ano-galeria {
     flex: 1;
     min-width: 300px;
     max-width: 33.33%;
-    padding: 0 5px; /* Reduz espaçamento lateral dentro da coluna */
+    padding: 0 5px;
 }
 
 .ano-galeria h3 {
@@ -161,16 +158,16 @@ header nav ul li a:hover::after {
     width: 100%;
     aspect-ratio: 1 / 1;
     overflow: hidden;
-    transform: scale(0.8); /* Inicia com a imagem minimizada */
-    opacity: 0.3; /* Torna a imagem menos visível inicialmente */
-    transition: transform 0.8s ease-out, opacity 0.8s ease-out; /* Suaviza a animação */
+    transform: scale(0.8);
+    opacity: 0.3;
+    transition: transform 0.8s ease-out, opacity 0.8s ease-out;
     z-index: 1;
     border-radius: 10px;
 }
 
 .ano-galeria img.active {
-    transform: scale(1); /* Imagem fica em tamanho normal */
-    opacity: 1; /* Torna a imagem totalmente visível */
+    transform: scale(1);
+    opacity: 1;
 }
 
 
@@ -196,8 +193,8 @@ header nav ul li a:hover::after {
 
 .depoimento {
     display: flex;
-    flex-direction: column; /* empilha verticalmente */
-    align-items: center; /* centraliza tudo */
+    flex-direction: column;
+    align-items: center;
     background-color: orange;
     padding: 30px 20px;
     border-radius: 8px;
@@ -239,6 +236,124 @@ header nav ul li a:hover::after {
     margin-bottom: 50px;
 }
 
+#extras-pensamento {
+    background-color: #f4f4f4;
+    padding: 60px 20px;
+}
+
+.extras-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    max-width: 90%;
+    margin: 0 auto;
+    gap: 30px;
+}
+
+.calendario-box,
+.link-unifil-box {
+    flex: 1;
+    min-width: 300px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.calendario-box:hover,
+.link-unifil-box:hover {
+    transform: scale(1.02);
+}
+
+.calendario-box h3,
+.link-unifil-box h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #000;
+}
+
+.calendario-box img,
+.link-unifil-box img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.link-unifil-box a img:hover {
+    transform: scale(1.05);
+}
+
+.calendario-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.calendario-tabela {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.calendario-tabela th,
+.calendario-tabela td {
+    border: 1px solid #ccc;
+    padding: 12px;
+    text-align: center;
+    background-color: #fff;
+    color: #333;
+}
+
+.calendario-tabela th {
+    background-color: orange;
+    color: #fff;
+}
+
+.calendario-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.calendario-nav button {
+    background-color: #f4f4f4;
+    border: none;
+    font-size: 18px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.calendario-nav button:hover {
+    background-color: #e0e0e0;
+}
+
+.calendario-tabela td:hover {
+    background-color: #ffe4b2;
+    cursor: pointer;
+}
+
+.calendario-tabela td.marcar {
+    background-color: #ffcc00;
+    color: #fff;
+    font-weight: bold;
+}
+
+.calendario-tabela td.marcar:hover {
+    background-color: #ff9900;
+    cursor: pointer;
+}
+
 #imagem-banner img {
     width: 100%;
     height: auto;
@@ -254,10 +369,9 @@ footer {
     position: relative;
     width: 100%;
     margin-top: 20px;
-    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1); /* Sombra no footer para dar destaque */
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Contêiner do footer com flexbox */
 footer .footer-content {
     display: flex;
     align-items: center;
@@ -267,14 +381,13 @@ footer .footer-content {
     flex-wrap: wrap;
 }
 
-/* Estilos para os links do footer centralizados */
 footer nav.footer-nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
-    justify-content: center; /* Centraliza os links */
-    flex-grow: 1; /* Garante que os links ocupem o espaço restante */
+    justify-content: center;
+    flex-grow: 1;
 }
 
 footer nav.footer-nav ul li {
@@ -290,7 +403,7 @@ footer nav.footer-nav ul li a {
 }
 
 footer nav.footer-nav ul li a:hover {
-    color: #ffcc00; /* Cor de destaque ao passar o mouse */
+    color: #ffcc00;
 }
 
 footer p {
@@ -299,10 +412,9 @@ footer p {
     color: #ccc;
 }
 
-/* Estilos para a logo à direita no footer */
 footer .footer-logo {
-    margin-left: auto; /* Empurra a imagem para a direita */
-    margin-top: 10px; /* Adiciona um pequeno espaço acima da logo */
+    margin-left: auto;
+    margin-top: 10px;
 }
 
 footer .footer-logo img.logo-footer {
