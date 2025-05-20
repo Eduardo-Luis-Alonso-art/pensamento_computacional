@@ -1,20 +1,21 @@
 const images = document.querySelectorAll('.ano-galeria img');
 
+// Ajuste do IntersectionObserver para mostrar as imagens mais rápido
 const observer = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            entry.target.classList.add('active');
+            entry.target.classList.add('active'); // Adiciona a classe active
         } else {
-            entry.target.classList.remove('active');
+            entry.target.classList.remove('active'); // Remove a classe active
         }
     });
 }, {
-    threshold: 0.3,
-    rootMargin: '0px 0px -50% 0px'
+    threshold: 0.1, // A imagem vai aparecer quando 20% dela estiver visível
+    rootMargin: '0px 0px -10% 0px' // A imagem entra um pouco antes de estar completamente visível
 });
 
 images.forEach(image => {
-    observer.observe(image);
+    observer.observe(image); // Observa cada imagem da galeria
 });
 
 const monthNames = [
@@ -23,13 +24,13 @@ const monthNames = [
 ];
 
 let currentDate = new Date();
-let currentMonth = currentDate.getMonth();
-let currentYear = currentDate.getFullYear();
+let currentMonth = currentDate.getMonth(); // Mês atual
+let currentYear = 2025; // Ano fixo para o calendário acadêmico
 
 const importantDates = [
     { day: 10, month: 1, description: "Início das Aulas" },
     { day: 4, month: 6, description: "Férias de Julho" },
-    { day: 10, month: 10, description: "última aula do Curso" },
+    { day: 10, month: 10, description: "Última aula do Curso" },
     { day: 15, month: 10, description: "Formatura e encerramento do Curso" },
 ];
 
@@ -92,13 +93,12 @@ function markImportantDates(cell, day, month) {
 
 function changeMonth(increment) {
     currentMonth += increment;
-    
+
+    // Impede a mudança de ano
     if (currentMonth > 11) {
-        currentMonth = 0;
-        currentYear++;
+        currentMonth = 0; // Janeiro
     } else if (currentMonth < 0) {
-        currentMonth = 11;
-        currentYear--;
+        currentMonth = 11; // Dezembro
     }
 
     generateCalendar(currentMonth, currentYear);

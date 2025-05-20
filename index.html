@@ -40,23 +40,36 @@
             <h2 class="titulo-galeria">Galeria de fotos</h2>
         </div>
         
-        <div class="galeria-grid">
-            <div class="ano-galeria">
-                <h3>Fotos de 2023</h3>
-                <img src="img/MonitoresTurmaB2023.PNG" alt="Monitores da turma B de 2023">
-                <img src="img/TurmaDoProfessorEron2023.jpg" alt="Turma do Professor Eron de 2023">
-            </div>
-
-            <div class="ano-galeria">
-                <h3>Fotos de 2024</h3>
-                <img src="img/AlunosDestaques2024.png" alt="Alunos destaques de 2024">
-            </div>
-
-            <div class="ano-galeria">
-                <h3>Fotos de 2025</h3>
-
-            </div>
+        <<div class="galeria-grid">
+    <div class="ano-galeria">
+        <h3>Fotos de 2023</h3>
+        <div class="foto-container">
+            <img src="img/MonitoresTurmaB2023.PNG" alt="Monitores da turma B de 2023">
+            <div class="image-overlay">Monitores da Turma B</div>
         </div>
+        <div class="foto-container">
+            <img src="img/TurmaDoProfessorEron2023.jpg" alt="Turma do Professor Eron de 2023">
+            <div class="image-overlay">Turma do Professor Eron</div>
+        </div>
+    </div>
+
+    <div class="ano-galeria">
+        <h3>Fotos de 2024</h3>
+        <div class="foto-container">
+            <img src="img/AlunosDestaques2024.png" alt="Alunos destaques de 2024">
+            <div class="image-overlay">Alunos Destaques de 2024</div>
+        </div>
+        <div class="foto-container">
+            <img src="img/TodasAsTurmasDe2024.JPG" alt="Todas as Turmas de 2024">
+            <div class="image-overlay">Todas as Turmas de 2024</div>
+        </div>
+    </div>
+
+    <div class="ano-galeria">
+        <h3>Fotos de 2025</h3>
+        <!-- Você pode adicionar mais fotos aqui, se necessário -->
+    </div>
+</div>
     </section>
 
     <section id="porque-fazer">
@@ -83,7 +96,9 @@
         <div class="depoimento">
             <div class="professor-info">
                 <img src="img/EronPonce.jpg" alt="Professor Eron Ponce">
-                <h3>Eron Ponce</h3>
+                <div class="nome-container">
+                    <h3>Eron Ponce</h3>
+                </div>
             </div>
             <p>"O projeto do pensamento computacional me mudou nos longos desses 3 anos, me permitiu ganhar experiencias que nunca teria pensado em adquirir, é ótimo saber 
                 que você está realizando algo que você gosta. A interação com os alunos e entendimento aprofundado me ajudou muito em minha caminhada e em minha opinião os 
@@ -94,7 +109,9 @@
         <div class="depoimento">
             <div class="professor-info">
                 <img src="img/RenataGransoti.jpg" alt="Professora Renata Gransoti">
-                <h3>Renata Gransoti</h3>
+                <div class="nome-container">
+                    <h3>Renata Gransoti</h3>
+                </div>
             </div>
             <p>"Fui monitora em 2022 e instrutora em 2023 e 2024, foi uma experiência muito boa, onde consegui ensinar lógica de programação e como pensar computacionalmente. 
                 Consegui ver a evolução dos alunos no decorrer do curso e é muito gratificante saber que contribui através do ensino e uso de tecnologias na vida deles."</p>
@@ -103,7 +120,9 @@
         <div class="depoimento">
             <div class="professor-info">
                 <img src="img/MatheusVininius.jpg" alt="Professer Matheus Vinicíus">
-                <h3>Matheus Vinicíus</h3>
+                <div class="nome-container">
+                    <h3>Matheus Vinicíus</h3>
+                </div>
             </div>
             <p>"Minha experiência como professor nesse projeto foi extremamente gratificante. Enquanto ensinava conceitos e tecnologias atuais do mercado, também pude 
                 aprofundar meu conhecimento em tópicos importantes, com foco sempre nos fundamentos. Essa busca por entender melhor esses fundamentos me motivou a procurar 
@@ -114,7 +133,9 @@
         <div class="depoimento">
             <div class="professor-info">
                 <img src="img/GeovanaAndrade.jpg" alt="Professora Geovana Andrade">
-                <h3>Geovana Andrade</h3>
+                <div class="nome-container">
+                    <h3>Geovana Andrade</h3>
+                </div>
             </div>
             <p>"Fui professora no Pensamento Computacional e, durante minha experiência, tive a oportunidade de contribuir para a formação de jovens do ensino médio no 
                 aprendizado de lógica de programação e programação básica. O curso, gratuito e acessível, foi uma oportunidade única de levar conhecimento a estudantes que, 
@@ -167,19 +188,27 @@
     </div>
 </section>
 
-    <footer>
+<footer> 
+    <div class="footer-content">
         <div class="footer-logo">
-            <img src="img/logo-unifil2.png" alt="Logo da Unifil">
+            <img src="img/logo-unifil2.png" alt="Logo da Unifil" class="logo-footer">
         </div>
-        <nav class="footer-nav">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="sobre.html">Explicação do Curso</a></li>
-                <li><a href="galeria.html">Mural</a></li>
-                <li><a href="contato.html">Contato</a></li>
-            </ul>
-        </nav>
-    </footer>
+        <div class="footer-nav-container">
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sobre.html">Explicação do Curso</a></li>
+                    <li><a href="galeria.html">Mural</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="redes-sociais">
+            <a href="https://instagram.com" target="_blank"><img src="img/instagram.png" alt="Instagram"></a>
+            <a href="https://twitter.com" target="_blank"><img src="img/twitter.png" alt="Twitter"></a>
+        </div>
+    </div>
+</footer>
 
     <script src="script.js"></script>
 </body>
