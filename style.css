@@ -405,12 +405,11 @@ header nav ul li a:hover::after {
 footer {
     background-color: #fff;
     color: #2b2b2b;
-    text-align: center;
     padding: 40px 20px;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
     position: relative;
     width: 100%;
     margin-top: 20px;
-    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
 }
 
 footer .footer-content {
@@ -422,22 +421,22 @@ footer .footer-content {
     padding: 0 20px;
 }
 
-footer .footer-logo,
-footer .footer-nav-container,
-footer .redes-sociais {
+footer .footer-logo {
     display: flex;
+    justify-content: flex-start;
     align-items: center;
 }
 
-/* Logo à esquerda */
-footer .footer-logo {
-    justify-content: flex-start;
+footer .footer-logo img {
+    max-width: 150px; /* Ajuste o tamanho da logo */
+    height: auto;
 }
 
-/* Links de navegação no centro */
 footer .footer-nav-container {
-    flex: 1;
+    display: flex;
     justify-content: center;
+    align-items: center;
+    flex: 1;
 }
 
 footer .footer-nav ul {
@@ -464,15 +463,19 @@ footer .footer-nav ul li a:hover {
     color: #ffcc00;
 }
 
-/* Redes sociais à direita */
 footer .redes-sociais {
+    display: flex;
     justify-content: flex-end;
     gap: 20px;
 }
 
+footer .redes-sociais a {
+    display: inline-block;
+}
+
 footer .redes-sociais img {
     width: 40px;
-    height: auto;
+    height: 40px;
     transition: transform 0.3s ease;
 }
 
