@@ -1,30 +1,26 @@
-// Definição do IntersectionObserver para ativar animação de imagens na galeria
-const images = document.querySelectorAll('.ano-galeria img');
+// === Ativação de animações para imagens da galeria ===
+const galeriaImages = document.querySelectorAll('.ano-galeria img');
 
-// Configuração do IntersectionObserver para mostrar as imagens assim que entram no viewport
-const observer = new IntersectionObserver((entries) => {
+const observer = new IntersectionObserver((entries, obs) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            entry.target.classList.add('active'); // Adiciona a classe active
-        } else {
-            entry.target.classList.remove('active'); // Remove a classe active
+            entry.target.classList.add('active');
+            obs.unobserve(entry.target);
         }
     });
 }, {
-    threshold: 0.1, // A imagem vai aparecer quando 10% dela estiver visível
-    rootMargin: '0px 0px -10% 0px' // A imagem entra um pouco antes de estar completamente visível
+    threshold: 0.1,
+    rootMargin: '0px 0px -10% 0px'
 });
 
-// Observa todas as imagens da galeria
-images.forEach(image => observer.observe(image));
+galeriaImages.forEach(image => observer.observe(image));
 
-// Configuração dos nomes dos meses para o calendário
+// === Configuração do calendário ===
 const monthNames = [
     "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
     "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"
 ];
 
-// Configuração das datas importantes para o calendário
 const importantDates = [
     { day: 10, month: 1, description: "Início das Aulas" },
     { day: 4, month: 6, description: "Férias de Julho" },
@@ -32,12 +28,14 @@ const importantDates = [
     { day: 15, month: 10, description: "Formatura e encerramento do Curso" },
 ];
 
-// Definição da data atual
 let currentDate = new Date();
-let currentMonth = currentDate.getMonth(); // Mês atual
-let currentYear = 2025; // Ano fixo para o calendário acadêmico
+let currentMonth = parseInt(localStorage.getItem('currentMonth'), 10);
+if (isNaN(currentMonth) || currentMonth < 0 || currentMonth > 11) {
+    currentMonth = currentDate.getMonth();
+}
 
-// Função para gerar o calendário do mês atual
+const currentYear = 2025;
+
 function generateCalendar(month, year) {
     const firstDay = new Date(year, month, 1);
     const lastDay = new Date(year, month + 1, 0);
@@ -50,38 +48,30 @@ function generateCalendar(month, year) {
     const monthNameElement = document.querySelector('#month-name');
 
     monthNameElement.textContent = `${monthName} ${year}`;
-
     calendarBody.innerHTML = '';
 
     let row = document.createElement('tr');
     let day = 1;
 
-    // Preenche os dias do mês com as células vazias até o primeiro dia do mês
     for (let i = 0; i < startDay; i++) {
         row.appendChild(document.createElement('td'));
     }
 
-    // Preenche a primeira semana do calendário
     for (let i = startDay; i < 7; i++) {
         const cell = document.createElement('td');
         cell.textContent = day;
-        
         markImportantDates(cell, day, month);
-
         row.appendChild(cell);
         day++;
     }
     calendarBody.appendChild(row);
 
-    // Preenche as semanas subsequentes
     while (day <= numDays) {
         row = document.createElement('tr');
         for (let i = 0; i < 7 && day <= numDays; i++) {
             const cell = document.createElement('td');
             cell.textContent = day;
-            
             markImportantDates(cell, day, month);
-            
             row.appendChild(cell);
             day++;
         }
@@ -89,33 +79,61 @@ function generateCalendar(month, year) {
     }
 }
 
-// Função para marcar as datas importantes no calendário
 function markImportantDates(cell, day, month) {
     importantDates.forEach(date => {
         if (date.day === day && date.month === month) {
             cell.classList.add('marcar');
             cell.title = date.description;
+            cell.setAttribute('aria-label', `Data importante: ${date.description}`);
         }
     });
 }
 
-// Função para alterar o mês no calendário
 function changeMonth(increment) {
     currentMonth += increment;
 
-    // Impede a mudança de ano
     if (currentMonth > 11) {
-        currentMonth = 0; // Janeiro
+        currentMonth = 0;
     } else if (currentMonth < 0) {
-        currentMonth = 11; // Dezembro
+        currentMonth = 11;
     }
 
+    localStorage.setItem('currentMonth', currentMonth);
     generateCalendar(currentMonth, currentYear);
 }
 
-// Gera o calendário do mês atual
 generateCalendar(currentMonth, currentYear);
 
-// Eventos para mudar de mês
 document.querySelector('#prev-month').addEventListener('click', () => changeMonth(-1));
 document.querySelector('#next-month').addEventListener('click', () => changeMonth(1));
+
+// === Carrossel de imagens com transição ===
+const imagePaths = [
+  'img/pensamento.jpg',
+  'img/pensamento2.png',
+  'img/pensamento3.jpg',
+  'img/pensamento4.png',
+  'img/pensamento5.png',
+  'img/pensamento6.png'
+];
+
+const container = document.querySelector('.carrossel-container');
+
+if (container) {
+    const imgs = container.querySelectorAll('.carrossel-img');
+    let current = 0;
+    let next = 1;
+
+    setInterval(() => {
+        imgs[current].classList.remove('visible');
+        imgs[next].classList.add('visible');
+
+        current = next;
+        next = (next + 1) % imagePaths.length;
+
+        // Atualiza a imagem oculta para preparar a próxima troca
+        setTimeout(() => {
+            imgs[(current + 1) % 2].src = imagePaths[next];
+        }, 1000); // tempo igual ao CSS transition
+    }, 5000); // tempo de exibição de cada imagem
+}
