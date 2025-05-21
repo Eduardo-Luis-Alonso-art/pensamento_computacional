@@ -1,19 +1,19 @@
-// === Ativação de animações para imagens da galeria ===
 const galeriaImages = document.querySelectorAll('.ano-galeria img');
 
-const observer = new IntersectionObserver((entries, obs) => {
+const galleryObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-        if (entry.isIntersecting) {
+        if (entry.intersectionRatio >= 0.3) {  // Muda aqui a % mínima que quiser testar
             entry.target.classList.add('active');
-            obs.unobserve(entry.target);
+        } else {
+            entry.target.classList.remove('active');
         }
     });
 }, {
-    threshold: 0.1,
-    rootMargin: '0px 0px -10% 0px'
+    threshold: [0, 0.3],  // O callback dispara quando a visibilidade muda entre 0% e 30%
+    rootMargin: '0px 0px -10% 0px'  // Pode ajustar se quiser
 });
 
-galeriaImages.forEach(image => observer.observe(image));
+galeriaImages.forEach(image => galleryObserver.observe(image));
 
 // === Configuração do calendário ===
 const monthNames = [
@@ -53,10 +53,12 @@ function generateCalendar(month, year) {
     let row = document.createElement('tr');
     let day = 1;
 
+    // Preenche células vazias antes do primeiro dia do mês
     for (let i = 0; i < startDay; i++) {
         row.appendChild(document.createElement('td'));
     }
 
+    // Preenche o restante da semana com os dias
     for (let i = startDay; i < 7; i++) {
         const cell = document.createElement('td');
         cell.textContent = day;
@@ -66,6 +68,7 @@ function generateCalendar(month, year) {
     }
     calendarBody.appendChild(row);
 
+    // Preenche as semanas seguintes
     while (day <= numDays) {
         row = document.createElement('tr');
         for (let i = 0; i < 7 && day <= numDays; i++) {
@@ -102,38 +105,28 @@ function changeMonth(increment) {
     generateCalendar(currentMonth, currentYear);
 }
 
+// Gera o calendário inicial
 generateCalendar(currentMonth, currentYear);
 
+// Botões para trocar mês
 document.querySelector('#prev-month').addEventListener('click', () => changeMonth(-1));
 document.querySelector('#next-month').addEventListener('click', () => changeMonth(1));
 
-// === Carrossel de imagens com transição ===
-const imagePaths = [
-  'img/pensamento.jpg',
-  'img/pensamento2.png',
-  'img/pensamento3.jpg',
-  'img/pensamento4.png',
-  'img/pensamento5.png',
-  'img/pensamento6.png'
-];
+// === Ativação de animação para o pensamento ===
+const pensamento = document.querySelector('.pensamento-box');
 
-const container = document.querySelector('.carrossel-container');
+const pensamentoObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+        } else {
+            entry.target.classList.remove('active');
+        }
+    });
+}, {
+    threshold: 0.9
+});
 
-if (container) {
-    const imgs = container.querySelectorAll('.carrossel-img');
-    let current = 0;
-    let next = 1;
-
-    setInterval(() => {
-        imgs[current].classList.remove('visible');
-        imgs[next].classList.add('visible');
-
-        current = next;
-        next = (next + 1) % imagePaths.length;
-
-        // Atualiza a imagem oculta para preparar a próxima troca
-        setTimeout(() => {
-            imgs[(current + 1) % 2].src = imagePaths[next];
-        }, 1000); // tempo igual ao CSS transition
-    }, 5000); // tempo de exibição de cada imagem
+if (pensamento) {
+    pensamentoObserver.observe(pensamento);
 }
