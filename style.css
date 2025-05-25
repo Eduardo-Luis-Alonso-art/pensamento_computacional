@@ -306,32 +306,15 @@ header nav ul li a:focus-visible::after {
     justify-content: space-between;
 }
 
-.calendario-box:hover,
-.link-unifil-box:hover {
+.calendario-box:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.calendario-box h3,
-.link-unifil-box h3 {
+.calendario-box h3 {
     font-size: 22px;
     margin-bottom: 15px;
     color: #000;
-}
-
-.link-unifil-box img {
-    width: 100%;
-    max-width: 700px;
-    height: auto;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-    object-fit: cover;
-    margin-bottom: 15px;
-}
-
-.link-unifil-box a img:hover {
-    transform: scale(1.05);
 }
 
 .calendario-container {
@@ -400,6 +383,50 @@ header nav ul li a:focus-visible::after {
     cursor: pointer;
 }
 
+
+
+.link-unifil-box h3 {
+font-size: 24px;
+color: #2b2b2b;
+margin-bottom: 0;
+text-align: center;
+}
+
+.link-unifil-box p {
+font-size: 18px;
+color: #444;
+line-height: 1.5;
+text-align: center;
+}
+
+.botao-site {
+display: inline-block;
+background-color: transparent;
+color: orange;
+padding: 12px 24px;
+text-decoration: none;
+border: 2px solid orange;
+border-radius: 8px;
+font-weight: bold;
+text-align: center;
+position: relative;
+overflow: hidden;
+z-index: 1;
+transition: color 0.3s ease;
+animation: pulsar 3s infinite;
+
+}
+
+@keyframes pulsar {
+0%, 100% {
+box-shadow: 0 0 0px orange;
+}
+50% {
+box-shadow: 0 0 10px orange, 0 0 20px orange;
+}
+}
+
+
 #imagem-banner img {
     width: 100%;
     height: auto;
@@ -432,6 +459,7 @@ max-height: 58vh;
 object-fit: cover;
 flex-shrink: 0;
 }
+
 
 
 footer {
