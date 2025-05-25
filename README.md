@@ -1,1 +1,1 @@
-# [Recordações Pensamento Computacional] (https://eduardo-luis-alonso-art.github.io/RecordacoesPC/)
+# [Recordações Pensamento Computacional](https://eduardo-luis-alonso-art.github.io/RecordacoesPC/)

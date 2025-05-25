@@ -1,8 +1,35 @@
+const slides = document.querySelector('.slides');
+const imagens = document.querySelectorAll('.slides img');
+
+let index = 0;
+
+function passarSlide() {
+index++;
+
+if (index >= imagens.length) {
+    index = 0;
+}
+
+const larguraSlide = imagens[0].clientWidth;
+  slides.style.transform = `translateX(${-index * larguraSlide}px)`;
+}
+
+setInterval(passarSlide, 4000);
+
+window.addEventListener('resize', () => {
+const larguraSlide = imagens[0].clientWidth;
+  slides.style.transform = `translateX(${-index * larguraSlide}px)`;
+});
+
+
+
+
+
 const galeriaImages = document.querySelectorAll('.ano-galeria img');
 
 const galleryObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-        if (entry.intersectionRatio >= 0.3) {  // Muda aqui a % mínima que quiser testar
+        if (entry.intersectionRatio >= 0.3) { 
             entry.target.classList.add('active');
         } else {
             entry.target.classList.remove('active');

@@ -17,7 +17,7 @@ header {
     top: 0;
     width: 100%;
     background-color: #fff;
-    padding: 20px;
+    padding: 20px 20px; 
     z-index: 1000;
     display: flex;
     justify-content: space-between;
@@ -26,7 +26,7 @@ header {
 }
 
 header .logo-unifil img {
-    height: 95px;
+    height: 60px; 
     width: auto;
 }
 
@@ -74,17 +74,13 @@ header nav ul li a:focus-visible::after {
     width: 100%;
 }
 
-#pensamento {
+#pensamento,
+#porque-fazer {
     background-color: #f4f4f4;
     padding: 50px;
     text-align: center;
 }
 
-#porque-fazer {
-    background-color: #f4f4f4;
-    padding: 50px 50px 80px 50px;
-    text-align: center;
-}
 
 .pensamento-box {
     background-color: #d9d5d4;
@@ -95,19 +91,18 @@ header nav ul li a:focus-visible::after {
     max-width: 85%;
     margin-left: auto;
     margin-right: auto;
-
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
-}
+    transition: 
+        background-color 1.0s ease,
+        transform 0.5s ease,         
+        box-shadow 0.5s ease;        
+    }
 
 .pensamento-box.active {
-    opacity: 1;
-    transform: translateY(0);
+    background-color: orange;
+
 }
 
 .pensamento-box:hover {
-    background-color: orange;
     transform: scale(1.02);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
@@ -379,6 +374,7 @@ header nav ul li a:focus-visible::after {
 .calendario-nav button {
     background-color: #f4f4f4;
     border: none;
+    border-radius: 10%;
     font-size: 18px;
     padding: 10px;
     cursor: pointer;
@@ -407,12 +403,36 @@ header nav ul li a:focus-visible::after {
 #imagem-banner img {
     width: 100%;
     height: auto;
-    max-height: 58vh; /* controla a altura máxima */
+    max-height: 58vh; 
     object-fit: cover;
     display: block;
-    margin-top: 120px; /* mantém o espaço para o header fixo */
-    margin-bottom: 40px; /* espaço para o conteúdo abaixo */
+    margin-top: 120px; 
+    margin-bottom: 40px; 
 }
+
+.carrossel {
+width: 100%;
+height: auto;
+overflow: hidden;
+border-radius: 10px;
+box-shadow: 0 0 20px rgba(0,0,0,0.2);
+margin: 0 auto;
+}
+
+.slides {
+display: flex;
+transition: transform 1s ease-in-out;
+width: 100%;
+}
+
+.slides img {
+width: 100%;
+height: auto;
+max-height: 58vh;
+object-fit: cover;
+flex-shrink: 0;
+}
+
 
 footer {
     background-color: #fff;
