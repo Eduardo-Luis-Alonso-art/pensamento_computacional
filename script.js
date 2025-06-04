@@ -14,7 +14,7 @@ const larguraSlide = imagens[0].clientWidth;
   slides.style.transform = `translateX(${-index * larguraSlide}px)`;
 }
 
-setInterval(passarSlide, 4000);
+setInterval(passarSlide, 5000);
 
 window.addEventListener('resize', () => {
 const larguraSlide = imagens[0].clientWidth;
@@ -36,8 +36,8 @@ const galleryObserver = new IntersectionObserver((entries) => {
         }
     });
 }, {
-    threshold: [0, 0.3],  // O callback dispara quando a visibilidade muda entre 0% e 30%
-    rootMargin: '0px 0px -10% 0px'  // Pode ajustar se quiser
+    threshold: [0, 0.3],  
+    rootMargin: '0px 0px -10% 0px'  
 });
 
 galeriaImages.forEach(image => galleryObserver.observe(image));
