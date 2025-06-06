@@ -140,7 +140,7 @@ document.querySelector('#prev-month').addEventListener('click', () => changeMont
 document.querySelector('#next-month').addEventListener('click', () => changeMonth(1));
 
 // === Ativação de animação para o pensamento ===
-const pensamento = document.querySelector('.pensamento-box');
+const pensamentoBoxes = document.querySelectorAll('.pensamento-box');
 
 const pensamentoObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -154,9 +154,7 @@ const pensamentoObserver = new IntersectionObserver((entries) => {
     threshold: 0.9
 });
 
-if (pensamento) {
-    pensamentoObserver.observe(pensamento);
-}
+pensamentoBoxes.forEach(box => pensamentoObserver.observe(box));
 
 
 //Scroll
