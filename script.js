@@ -189,3 +189,63 @@ const scrollBox = document.getElementById('scrollBox');
   scrollBox.addEventListener('mouseleave', () => {
     isPaused = false;
   });
+
+document.addEventListener('DOMContentLoaded', function() {
+  const cards = document.querySelectorAll('.monitor-card');
+  const prevBtn = document.querySelector('.prev');
+  const nextBtn = document.querySelector('.next');
+  const carrosselContainer = document.querySelector('.carrossel-monitores');
+  let currentIndex = 0;
+  let intervalId;
+
+  // Mostra o card atual
+  function showCard(index) {
+    cards.forEach(card => card.classList.remove('active'));
+    cards[index].classList.add('active');
+  }
+
+  // Avança para o próximo card
+  function nextCard() {
+    currentIndex = (currentIndex + 1) % cards.length;
+    showCard(currentIndex);
+  }
+
+  // Volta para o card anterior
+  function prevCard() {
+    currentIndex = (currentIndex - 1 + cards.length) % cards.length;
+    showCard(currentIndex);
+  }
+
+  // Inicia o intervalo automático
+  function startCarrossel() {
+    intervalId = setInterval(nextCard, 5000); // Muda a cada 5 segundos
+  }
+
+  // Pausa o carrossel
+  function pauseCarrossel() {
+    clearInterval(intervalId);
+  }
+
+  // Event listeners para os botões
+  nextBtn.addEventListener('click', function() {
+    nextCard();
+    pauseCarrossel();
+    startCarrossel(); // Reinicia o intervalo após clique
+  });
+
+  prevBtn.addEventListener('click', function() {
+    prevCard();
+    pauseCarrossel();
+    startCarrossel(); // Reinicia o intervalo após clique
+  });
+
+  // Pausa quando o mouse está sobre o carrossel
+  carrosselContainer.addEventListener('mouseenter', pauseCarrossel);
+  
+  // Continua quando o mouse sai
+  carrosselContainer.addEventListener('mouseleave', startCarrossel);
+
+  // Inicia o carrossel
+  showCard(currentIndex);
+  startCarrossel();
+});
