@@ -501,7 +501,19 @@ header nav ul li a:focus-visible::after {
   flex: 1;
   min-width: 300px;
   max-width: 600px;
-  /* ... (mantenha seus estilos atuais) ... */
+  background: white; /* Fundo branco */
+  padding: 30px; /* Espaçamento interno */
+  border-radius: 10px; /* Cantos arredondados */
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.2), 
+              0 15px 20px -10px rgba(0, 0, 0, 0.15); /* Sombra sofisticada */
+  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Transição suave */
+  margin: 20px 0; /* Margem externa */
+}
+
+.papel-monitores:hover {
+  box-shadow: 0 15px 40px -5px rgba(0, 0, 0, 0.25), 
+              0 20px 25px -10px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px); /* Levanta levemente */
 }
 
 .carrossel-monitores {
@@ -842,7 +854,7 @@ footer .redes-sociais img:focus-visible {
 }
 
 .depoimentos {
-  font-size: 18px;
+  font-size: 14px;
   flex: 2;
   background-color: white;
   border-radius: 20px;
