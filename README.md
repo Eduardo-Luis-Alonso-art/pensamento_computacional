@@ -1,1 +1,0 @@
-# Recordações Pensamento Computacional
