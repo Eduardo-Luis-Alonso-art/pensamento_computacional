@@ -1,0 +1,199 @@
+body {
+font-family: 'Righteous', sans-serif;
+margin: 0;
+padding: 0;
+background-color: #f4f4f4;
+display: flex;
+flex-direction: column;
+min-height: 100vh;
+}
+
+header {
+position: fixed;
+top: 0;
+width: 100%;
+background-color: #fff;
+padding: 20px 20px; 
+z-index: 1000;
+display: flex;
+justify-content: space-between;
+align-items: center;
+box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+header .logo-unifil img {
+height: 60px; 
+width: auto;
+}
+
+header nav {
+display: flex;
+justify-content: flex-end;
+align-items: center;
+padding-right: 20px;
+}
+
+header nav ul {
+list-style: none;
+padding: 0;
+margin: 0;
+display: flex;
+}
+
+header nav ul li {
+margin: 0 15px;
+}
+
+header nav ul li a {
+position: relative;
+color: #2b2b2b;
+text-decoration: none;
+font-weight: bold;
+text-transform: uppercase;
+font-size: 16px;
+padding-bottom: 5px;
+}
+
+header nav ul li a::after {
+content: "";
+position: absolute;
+left: 0;
+bottom: 0;
+height: 2px;
+width: 0;
+background-color: orange;
+transition: width 0.6s ease;
+}
+
+header nav ul li a:hover::after,
+header nav ul li a:focus-visible::after {
+width: 100%;
+}
+
+.modulo {
+background-color: #f4f4f4;
+padding: 100px 20px 60px; 
+text-align: center;
+}
+
+.titulo-modulo {
+font-size: 40px;
+color: #2b2b2b;
+margin-bottom: 30px;
+text-transform: uppercase;
+}
+
+.imagem-modulo img {
+width: 150px;
+margin: 20px 0;
+}
+
+.descricao-modulo {
+font-size: 18px;
+color: #444;
+max-width: 750px;
+margin: 0 auto 30px;
+line-height: 1.6;
+background-color: #d9d5d4;
+padding: 20px;
+border-radius: 8px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.descricao-modulo:hover {
+transform: scale(1.01);
+box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
+
+.topicos-modulo {
+list-style: none;
+padding: 0;
+margin: 40px auto;
+max-width: 600px;
+text-align: left;
+}
+
+.topicos-modulo li {
+font-size: 18px;
+color: #2b2b2b;
+padding: 10px;
+background-color: #fff;
+margin-bottom: 10px;
+border-left: 6px solid orange;
+border-radius: 4px;
+transition: background-color 0.3s ease;
+}
+
+.topicos-modulo li:hover {
+background-color: #ffe7c4;
+}
+
+.importancia {
+font-size: 18px;
+color: #333;
+max-width: 700px;
+margin: 30px auto;
+padding: 20px;
+background-color: #d9d5d4;
+border-radius: 8px;
+line-height: 1.6;
+}
+
+.botao-voltar {
+display: inline-block;
+margin-top: 30px;
+padding: 12px 24px;
+background-color: transparent;
+color: orange;
+border: 2px solid orange;
+border-radius: 8px;
+font-weight: bold;
+text-decoration: none;
+transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.botao-voltar:hover {
+background-color: orange;
+color: white;
+cursor: pointer;
+}
+
+/* Linha animada (pseudo-elemento) */
+footer .footer-nav ul li a::after {
+content: "";
+position: absolute;
+left: 0;
+bottom: 0;
+width: 0;
+height: 2px;
+background-color: orange;
+transition: width 0.6s ease;
+}
+
+/* Estado hover/focus para animar a linha */
+footer .footer-nav ul li a:hover::after,
+footer .footer-nav ul li a:focus-visible::after {
+width: 100%;
+}
+
+footer .redes-sociais {
+display: flex;
+justify-content: flex-end;
+gap: 20px;
+}
+
+footer .redes-sociais a {
+display: inline-block;
+}
+
+footer .redes-sociais img {
+width: 40px;
+height: 40px;
+transition: transform 0.3s ease;
+}
+
+footer .redes-sociais img:hover,
+footer .redes-sociais img:focus-visible {
+transform: scale(1.1);
+}
