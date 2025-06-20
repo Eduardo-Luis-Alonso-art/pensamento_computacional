@@ -1,10 +1,10 @@
 /**========================================================================
  * !                    Documento de Estilização Base
- *
-  *========================================================================**/
-/* *                 Seções de Corpo do Arquivo Abaixo
- &               Alteram praticamente HTML inteiro, cuidado!
-   ========================================================================**/
+ *========================================================================**/
+
+/* * Seções de Corpo do Arquivo Abaixo
+ &   Alteram praticamente HTML inteiro, cuidado!
+ ======================================================================== */
 
 * {
     box-sizing: border-box;
@@ -18,8 +18,12 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    overflow-x: hidden;
 }
 
+/* =======================
+   HEADER - Menu Superior
+========================== */
 header {
     position: fixed;
     top: 0;
@@ -82,7 +86,9 @@ header nav ul li a:focus-visible::after {
     width: 100%;
 }
 
-
+/* =======================
+   FOOTER - Rodapé
+========================== */
 footer {
     background-color: #fff;
     color: #2b2b2b;
@@ -110,7 +116,6 @@ footer .footer-logo {
 
 footer .footer-logo img {
     max-width: 150px;
-    /* Ajuste o tamanho da logo */
     height: auto;
 }
 
@@ -140,7 +145,6 @@ footer .footer-nav ul li a {
     transition: color 0.3s ease;
 }
 
-/* Linha animada (pseudo-elemento) */
 footer .footer-nav ul li a::after {
     content: "";
     position: absolute;
@@ -152,7 +156,6 @@ footer .footer-nav ul li a::after {
     transition: width 0.6s ease;
 }
 
-/* Estado hover/focus para animar a linha */
 footer .footer-nav ul li a:hover::after,
 footer .footer-nav ul li a:focus-visible::after {
     width: 100%;
@@ -179,8 +182,16 @@ footer .redes-sociais img:focus-visible {
     transform: scale(1.1);
 }
 
-/* Media Queries para Responsividade */
+footer .footer-direitos {
+    text-align: center;
+    font-size: 13px;
+    color: #888;
+    margin-top: 20px;
+}
 
+/* ==========================
+   MEDIA QUERIES - Responsivo
+============================ */
 @media (max-width: 1024px) {
     .ano-galeria {
         max-width: 50%;
@@ -249,7 +260,9 @@ footer .redes-sociais img:focus-visible {
     }
 }
 
-/* Pulsar opcional (caso queira manter a animação) */
+/* ==========================
+   ANIMAÇÃO - Pulsar (opcional)
+============================ */
 @keyframes pulsar {
     0% {
         box-shadow: 0 0 0 0 rgba(255, 165, 0, 0.6);
