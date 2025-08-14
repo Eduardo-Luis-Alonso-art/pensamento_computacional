@@ -228,3 +228,28 @@ document.addEventListener('DOMContentLoaded', function () {
   showCard(currentIndex);
   startCarrossel();
 });
+
+
+let prevScrollPos = window.pageYOffset;
+  const header = document.querySelector("header");
+
+  window.addEventListener("scroll", function () {
+    const currentScrollPos = window.pageYOffset;
+
+    if (prevScrollPos > currentScrollPos) {
+      // rolando pra cima -> mostra
+      header.style.top = "0";
+    } else {
+      // rolando pra baixo -> esconde
+      header.style.top = "-100px";
+    }
+
+    prevScrollPos = currentScrollPos;
+  });
+
+
+
+  
+console.log("Olá, me chamo Juliana. Muito prazer.");
+
+
