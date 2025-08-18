@@ -83,7 +83,6 @@ header nav ul li a::after {
 
 /* --- Versão Mobile (max-width: 768px) --- */
 @media (max-width: 768px) {
-@media (max-width: 768px) {
     header {
         flex-wrap: wrap; /* Permite quebra de linha */
         padding: 15px 5%; /* Reduz padding */
@@ -213,3 +212,4 @@ footer .footer-direitos {
     color: #888;
     margin-top: 20px;
 }
+
