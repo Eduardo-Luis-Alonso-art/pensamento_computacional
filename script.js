@@ -131,6 +131,27 @@ generateCalendar(currentMonth, currentYear);
 document.querySelector('#prev-month').addEventListener('click', () => changeMonth(-1));
 document.querySelector('#next-month').addEventListener('click', () => changeMonth(1));
 
+// Adaptação da tabela de horários para mobile
+function adaptTableForMobile() {
+    const tabela = document.querySelector('.tabela-horarios');
+    if (!tabela) return;
+
+    if (window.innerWidth <= 767) {
+        // Adiciona labels para as células
+        const headers = ['Dia da Semana', 'Horário de Início', 'Horário de Término'];
+        const cells = tabela.querySelectorAll('tbody td');
+        
+        cells.forEach((cell, index) => {
+            const headerIndex = index % 3;
+            cell.setAttribute('data-label', headers[headerIndex]);
+        });
+    }
+}
+
+// Executa na carga e no redimensionamento
+window.addEventListener('DOMContentLoaded', adaptTableForMobile);
+window.addEventListener('resize', adaptTableForMobile);
+
 // =====================================
 // ANIMAÇÃO PARA SEÇÃO DE PENSAMENTO COMPUTACIONAL
 // =====================================
