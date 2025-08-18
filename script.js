@@ -1,185 +1,176 @@
-// === Carrossel dos instrutores (slides de imagens automáticas) ===
-const slides = document.querySelector('.slides');
-const imagens = document.querySelectorAll('.slides img');
-let index = 0;
+// ======================
+// CARROSSEL DE INSTRUTORES
+// ======================
+function initInstructorsCarousel() {
+  const slides = document.querySelector('.slides');
+  const imagens = document.querySelectorAll('.slides img');
+  let index = 0;
 
-function passarSlide() {
-  index++;
-  if (index >= imagens.length) {
-    index = 0;
+  function passarSlide() {
+    index = (index + 1) % imagens.length;
+    updateSlidePosition();
   }
-  const larguraSlide = imagens[0].clientWidth;
-  slides.style.transform = `translateX(${-index * larguraSlide}px)`;
+
+  function updateSlidePosition() {
+    const larguraSlide = imagens[0].clientWidth;
+    slides.style.transform = `translateX(${-index * larguraSlide}px)`;
+  }
+
+  const slideInterval = setInterval(passarSlide, 5000);
+  window.addEventListener('resize', updateSlidePosition);
+
+  return () => clearInterval(slideInterval);
 }
 
-setInterval(passarSlide, 5000);
+// ======================
+// ANIMAÇÃO DA GALERIA
+// ======================
+function initGalleryAnimation() {
+  const galeriaImages = document.querySelectorAll('.ano-galeria img');
 
-window.addEventListener('resize', () => {
-  const larguraSlide = imagens[0].clientWidth;
-  slides.style.transform = `translateX(${-index * larguraSlide}px)`;
-});
-
-
-// === Animação de entrada das imagens da galeria de anos anteriores ===
-const galeriaImages = document.querySelectorAll('.ano-galeria img');
-
-const galleryObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.intersectionRatio >= 0.3) {
-      entry.target.classList.add('active');
-    } else {
-      entry.target.classList.remove('active');
-    }
+  const galleryObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      entry.target.classList.toggle('active', entry.intersectionRatio >= 0.3);
+    });
+  }, {
+    threshold: [0, 0.3],
+    rootMargin: '0px 0px -10% 0px'
   });
-}, {
-  threshold: [0, 0.3],
-  rootMargin: '0px 0px -10% 0px'
-});
 
-galeriaImages.forEach(image => galleryObserver.observe(image));
-
-
-// === Calendário interativo com datas importantes ===
-const monthNames = [
-  "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
-  "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"
-];
-
-const importantDates = [
-  { day: 10, month: 1, description: "Início das Aulas" },
-  { day: 4, month: 6, description: "Férias de Julho" },
-  { day: 10, month: 10, description: "Última aula do Curso" },
-  { day: 15, month: 10, description: "Formatura e encerramento do Curso" },
-];
-
-let currentDate = new Date();
-let currentMonth = parseInt(localStorage.getItem('currentMonth'), 10);
-if (isNaN(currentMonth) || currentMonth < 0 || currentMonth > 11) {
-  currentMonth = currentDate.getMonth();
+  galeriaImages.forEach(image => galleryObserver.observe(image));
 }
 
-const currentYear = 2025;
+// ======================
+// CALENDÁRIO INTERATIVO
+// ======================
+function initCalendar() {
+  const monthNames = [
+    "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
+    "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"
+  ];
 
-function generateCalendar(month, year) {
-  const firstDay = new Date(year, month, 1);
-  const lastDay = new Date(year, month + 1, 0);
-  const monthName = monthNames[month];
-  const numDays = lastDay.getDate();
-  const startDay = firstDay.getDay();
+  const importantDates = [
+    { day: 10, month: 1, description: "Início das Aulas" },
+    { day: 4, month: 6, description: "Férias de Julho" },
+    { day: 10, month: 10, description: "Última aula do Curso" },
+    { day: 15, month: 10, description: "Formatura e encerramento do Curso" },
+  ];
 
-  const calendarBody = document.querySelector('#calendario tbody');
-  const monthNameElement = document.querySelector('#month-name');
-  monthNameElement.textContent = `${monthName} ${year}`;
-  calendarBody.innerHTML = '';
+  let currentDate = new Date();
+  let currentMonth = parseInt(localStorage.getItem('currentMonth'), 10) || currentDate.getMonth();
+  const currentYear = 2025;
 
-  let row = document.createElement('tr');
-  let day = 1;
+  function generateCalendar(month, year) {
+    const firstDay = new Date(year, month, 1);
+    const lastDay = new Date(year, month + 1, 0);
+    const monthName = monthNames[month];
+    const numDays = lastDay.getDate();
+    const startDay = firstDay.getDay();
 
-  for (let i = 0; i < startDay; i++) {
-    row.appendChild(document.createElement('td'));
+    const calendarBody = document.querySelector('#calendario tbody');
+    const monthNameElement = document.querySelector('#month-name');
+    monthNameElement.textContent = `${monthName} ${year}`;
+    calendarBody.innerHTML = '';
+
+    let row = document.createElement('tr');
+    let day = 1;
+
+    for (let i = 0; i < startDay; i++) {
+      row.appendChild(document.createElement('td'));
+    }
+
+    for (let i = startDay; i < 7; i++) {
+      const cell = createCalendarCell(day++, month);
+      row.appendChild(cell);
+    }
+    calendarBody.appendChild(row);
+
+    while (day <= numDays) {
+      row = document.createElement('tr');
+      for (let i = 0; i < 7 && day <= numDays; i++) {
+        const cell = createCalendarCell(day++, month);
+        row.appendChild(cell);
+      }
+      calendarBody.appendChild(row);
+    }
   }
 
-  for (let i = startDay; i < 7; i++) {
+  function createCalendarCell(day, month) {
     const cell = document.createElement('td');
     cell.textContent = day;
     markImportantDates(cell, day, month);
-    row.appendChild(cell);
-    day++;
-  }
-  calendarBody.appendChild(row);
-
-  while (day <= numDays) {
-    row = document.createElement('tr');
-    for (let i = 0; i < 7 && day <= numDays; i++) {
-      const cell = document.createElement('td');
-      cell.textContent = day;
-      markImportantDates(cell, day, month);
-      row.appendChild(cell);
-      day++;
-    }
-    calendarBody.appendChild(row);
-  }
-}
-
-function markImportantDates(cell, day, month) {
-  importantDates.forEach(date => {
-    if (date.day === day && date.month === month) {
-      cell.classList.add('marcar');
-      cell.title = date.description;
-      cell.setAttribute('aria-label', `Data importante: ${date.description}`);
-    }
-  });
-}
-
-function changeMonth(increment) {
-  currentMonth += increment;
-
-  if (currentMonth > 11) {
-    currentMonth = 0;
-  } else if (currentMonth < 0) {
-    currentMonth = 11;
+    return cell;
   }
 
-  localStorage.setItem('currentMonth', currentMonth);
+  function markImportantDates(cell, day, month) {
+    importantDates.forEach(date => {
+      if (date.day === day && date.month === month) {
+        cell.classList.add('marcar');
+        cell.title = date.description;
+        cell.setAttribute('aria-label', `Data importante: ${date.description}`);
+      }
+    });
+  }
+
+  function changeMonth(increment) {
+    currentMonth = (currentMonth + increment + 12) % 12;
+    localStorage.setItem('currentMonth', currentMonth);
+    generateCalendar(currentMonth, currentYear);
+  }
+
+  // Initialize and set up event listeners
   generateCalendar(currentMonth, currentYear);
+  document.querySelector('#prev-month').addEventListener('click', () => changeMonth(-1));
+  document.querySelector('#next-month').addEventListener('click', () => changeMonth(1));
 }
 
-generateCalendar(currentMonth, currentYear);
-document.querySelector('#prev-month').addEventListener('click', () => changeMonth(-1));
-document.querySelector('#next-month').addEventListener('click', () => changeMonth(1));
+// ======================
+// ANIMAÇÃO DE PENSAMENTO COMPUTACIONAL
+// ======================
+function initPensamentoAnimation() {
+  const pensamentoBoxes = document.querySelectorAll('.pensamento-box');
 
+  const pensamentoObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      entry.target.classList.toggle('active', entry.isIntersecting);
+    });
+  }, { threshold: 0.9 });
 
-// === Animação para a seção de pensamento computacional ===
-const pensamentoBoxes = document.querySelectorAll('.pensamento-box');
+  pensamentoBoxes.forEach(box => pensamentoObserver.observe(box));
+}
 
-const pensamentoObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('active');
-    } else {
-      entry.target.classList.remove('active');
+// ======================
+// SCROLL AUTOMÁTICO
+// ======================
+function initAutoScroll() {
+  const scrollBox = document.getElementById('scrollBox');
+  const conteudo = document.getElementById('conteudo');
+  const clone = conteudo.cloneNode(true);
+  scrollBox.appendChild(clone);
+
+  let scrollY = 0;
+  let isPaused = false;
+  let animationId;
+
+  function scrollLoop() {
+    if (!isPaused) {
+      scrollY = (scrollY + 0.5) % conteudo.scrollHeight;
+      scrollBox.scrollTop = scrollY;
     }
-  });
-}, {
-  threshold: 0.9
-});
-
-pensamentoBoxes.forEach(box => pensamentoObserver.observe(box));
-
-
-// === Scroll automático com pausa no hover (efeito loop infinito) ===
-const scrollBox = document.getElementById('scrollBox');
-const conteudo = document.getElementById('conteudo');
-const clone = conteudo.cloneNode(true);
-scrollBox.appendChild(clone);
-
-let scrollY = 0;
-let isPaused = false;
-
-function scrollLoop() {
-  if (!isPaused) {
-    scrollY += 0.5;
-    if (scrollY >= conteudo.scrollHeight) {
-      scrollY = 0;
-    }
-    scrollBox.scrollTop = scrollY;
+    animationId = requestAnimationFrame(scrollLoop);
   }
-  requestAnimationFrame(scrollLoop);
+
+  scrollBox.addEventListener('mouseenter', () => isPaused = true);
+  scrollBox.addEventListener('mouseleave', () => isPaused = false);
+
+  scrollLoop();
+  return () => cancelAnimationFrame(animationId);
 }
 
-scrollLoop();
-
-scrollBox.addEventListener('mouseenter', () => {
-  isPaused = true;
-});
-
-scrollBox.addEventListener('mouseleave', () => {
-  isPaused = false;
-});
-
-
-// === Carrossel dos monitores com autoplay e controle manual ===
-document.addEventListener('DOMContentLoaded', function () {
+// ======================
+// CARROSSEL DE MONITORES
+// ======================
+function initMonitorsCarousel() {
   const cards = document.querySelectorAll('.monitor-card');
   const prevBtn = document.querySelector('.prev');
   const nextBtn = document.querySelector('.next');
@@ -210,16 +201,19 @@ document.addEventListener('DOMContentLoaded', function () {
     clearInterval(intervalId);
   }
 
-  nextBtn.addEventListener('click', function () {
-    nextCard();
+  function handleNavigation() {
     pauseCarrossel();
     startCarrossel();
+  }
+
+  nextBtn.addEventListener('click', () => {
+    nextCard();
+    handleNavigation();
   });
 
-  prevBtn.addEventListener('click', function () {
+  prevBtn.addEventListener('click', () => {
     prevCard();
-    pauseCarrossel();
-    startCarrossel();
+    handleNavigation();
   });
 
   carrosselContainer.addEventListener('mouseenter', pauseCarrossel);
@@ -227,98 +221,111 @@ document.addEventListener('DOMContentLoaded', function () {
 
   showCard(currentIndex);
   startCarrossel();
-});
+  return pauseCarrossel;
+}
 
-
-let prevScrollPos = window.pageYOffset;
+// ======================
+// HEADER SCROLL BEHAVIOR
+// ======================
+function initHeaderScroll() {
   const header = document.querySelector("header");
+  let prevScrollPos = window.pageYOffset;
 
-  window.addEventListener("scroll", function () {
+  window.addEventListener("scroll", function() {
     const currentScrollPos = window.pageYOffset;
-
-    if (prevScrollPos > currentScrollPos) {
-      // rolando pra cima -> mostra
-      header.style.top = "0";
-    } else {
-      // rolando pra baixo -> esconde
-      header.style.top = "-100px";
-    }
-
+    header.style.top = prevScrollPos > currentScrollPos ? "0" : "-100px";
     prevScrollPos = currentScrollPos;
   });
+}
 
-
-
+// ======================
+// GALERIA POR ANO
+// ======================
+function initYearGallery() {
+  const anoBtns = document.querySelectorAll('.ano-btn');
+  const anoContainers = document.querySelectorAll('.ano-container');
   
-console.log("Olá, me chamo Juliana. Muito prazer.");
+  anoBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      anoBtns.forEach(b => b.classList.remove('ativo'));
+      btn.classList.add('ativo');
+      
+      const ano = btn.dataset.ano;
+      anoContainers.forEach(container => {
+        container.classList.toggle('ativo', container.id === `ano-${ano}`);
+      });
+    });
+  });
+}
 
+// ======================
+// LIGHTBOX MOBILE
+// ======================
+function initMobileLightbox() {
+  const lightboxMobile = document.querySelector('.lightbox-mobile');
+  const lightboxImgMobile = document.getElementById('lightbox-imagem-mobile');
+  const lightboxTituloMobile = document.getElementById('lightbox-titulo-mobile');
+  const lightboxDataMobile = document.getElementById('lightbox-data-mobile');
+  const closeLightbox = document.querySelector('.fechar-lightbox');
+  const fotoItems = document.querySelectorAll('.foto-item');
 
+  function isMobile() {
+    return window.innerWidth <= 768;
+  }
+
+  function openLightbox(imgSrc, titulo, data) {
+    lightboxImgMobile.src = imgSrc;
+    lightboxTituloMobile.textContent = titulo;
+    lightboxDataMobile.textContent = data;
+    lightboxMobile.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightboxHandler() {
+    lightboxMobile.style.display = 'none';
+    document.body.style.overflow = 'auto';
+  }
+
+  fotoItems.forEach(item => {
+    item.addEventListener('click', function() {
+      if (isMobile()) {
+        const img = this.querySelector('img');
+        const titulo = this.querySelector('.foto-titulo').textContent;
+        const data = this.querySelector('.foto-data').textContent;
+        openLightbox(img.src, titulo, data);
+      }
+    });
+  });
+
+  closeLightbox.addEventListener('click', closeLightboxHandler);
+  lightboxMobile.addEventListener('click', (e) => {
+    if (e.target === lightboxMobile) closeLightboxHandler();
+  });
+
+  window.addEventListener('orientationchange', closeLightboxHandler);
+}
+
+// ======================
+// INITIALIZATION
+// ======================
 document.addEventListener('DOMContentLoaded', function() {
-    // Navegação entre anos
-    const anoBtns = document.querySelectorAll('.ano-btn');
-    const anoContainers = document.querySelectorAll('.ano-container');
-    
-    anoBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            anoBtns.forEach(b => b.classList.remove('ativo'));
-            btn.classList.add('ativo');
-            
-            const ano = btn.dataset.ano;
-            anoContainers.forEach(container => {
-                container.classList.remove('ativo');
-                if (container.id === `ano-${ano}`) {
-                    container.classList.add('ativo');
-                }
-            });
-        });
-    });
-    
-    // Lightbox mobile
-    const lightboxMobile = document.querySelector('.lightbox-mobile');
-    const lightboxImgMobile = document.getElementById('lightbox-imagem-mobile');
-    const lightboxTituloMobile = document.getElementById('lightbox-titulo-mobile');
-    const lightboxDataMobile = document.getElementById('lightbox-data-mobile');
-    const closeLightbox = document.querySelector('.fechar-lightbox');
-    const fotoItems = document.querySelectorAll('.foto-item');
-    
-    // Verifica se é mobile
-    function isMobile() {
-        return window.innerWidth <= 768;
-    }
-    
-    fotoItems.forEach(item => {
-        item.addEventListener('click', function() {
-            if (isMobile()) {
-                const imgSrc = this.querySelector('img').src;
-                const titulo = this.querySelector('.foto-titulo').textContent;
-                const data = this.querySelector('.foto-data').textContent;
-                
-                lightboxImgMobile.src = imgSrc;
-                lightboxTituloMobile.textContent = titulo;
-                lightboxDataMobile.textContent = data;
-                lightboxMobile.style.display = 'flex';
-                document.body.style.overflow = 'hidden';
-            }
-        });
-    });
-    
-    closeLightbox.addEventListener('click', () => {
-        lightboxMobile.style.display = 'none';
-        document.body.style.overflow = 'auto';
-    });
-    
-    lightboxMobile.addEventListener('click', (e) => {
-        if (e.target === lightboxMobile) {
-            lightboxMobile.style.display = 'none';
-            document.body.style.overflow = 'auto';
-        }
-    });
-    
-    // Fechar lightbox ao girar a tela
-    window.addEventListener('orientationchange', function() {
-        if (lightboxMobile.style.display === 'flex') {
-            lightboxMobile.style.display = 'none';
-            document.body.style.overflow = 'auto';
-        }
-    });
+  const cleanupFunctions = [
+    initInstructorsCarousel(),
+    initMonitorsCarousel(),
+    initAutoScroll()
+  ].filter(Boolean);
+
+  initGalleryAnimation();
+  initCalendar();
+  initPensamentoAnimation();
+  initHeaderScroll();
+  initYearGallery();
+  initMobileLightbox();
+
+  console.log("Olá, me chamo Juliana. Muito prazer.");
+
+  // Cleanup on page unload
+  window.addEventListener('beforeunload', () => {
+    cleanupFunctions.forEach(cleanup => cleanup());
+  });
 });
