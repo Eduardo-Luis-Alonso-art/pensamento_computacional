@@ -835,6 +835,8 @@
     border-radius: 16px;
     text-align: center;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    opacity: 1;
+    transition: opacity 0.5s ease, border 0.5s ease, box-shadow 0.5s ease;
 }
 
 .link-unifil-box h3 {
@@ -887,6 +889,22 @@
     color: white;
 }
 
+
+@media (max-width: 768px) {
+    .link-unifil-box {
+        opacity: 0.8;
+        border-width: 1px;
+    }
+}
+
+@media (max-width: 576px) {
+    .link-unifil-box {
+        opacity: 1;
+        border: none;
+        box-shadow: none;
+        background: none;
+    }
+}
 /* ==========================
    BANNER DE IMAGEM (MANTIDO PARA DESKTOP)
 =========================== */
