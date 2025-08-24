@@ -29,24 +29,21 @@ header {
     top: 0;
     width: 100%;
     background-color: #fff;
-    padding: 1.25rem 5%; /* 20px → 1.25rem, padding lateral em % */
+    padding: 1.25rem 5%; 
     z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.8);
-    flex-wrap: wrap; /* Permite quebra de linha */
+    flex-wrap: wrap; 
 }
 
 header .logo-unifil img {
-    height: 3.75rem; /* 60px → 3.75rem */
+    height: 3.75rem;
     width: auto;
-    transition: transform 0.3s ease; /* Adiciona animação */
+    transition: transform 0.3s ease; 
 }
 
-h/* ==========================
-   HEADER COM ANIMAÇÃO DO FOOTER
-=========================== */
 header nav {
     display: flex;
     justify-content: flex-end;
@@ -70,11 +67,11 @@ header nav ul li a {
     text-transform: uppercase;
     font-size: 1rem;
     padding-bottom: 0.3125rem;
-    transition: color 0.3s ease; /* Transição para a cor do texto */
-    white-space: nowrap; /* Mantém o texto em uma linha */
+    transition: color 0.3s ease; 
+    white-space: nowrap; 
 }
 
-/* Efeito de underline laranja - IGUAL AO FOOTER */
+
 header nav ul li a::after {
     content: "";
     position: absolute;
@@ -86,7 +83,7 @@ header nav ul li a::after {
     transition: width 0.6s ease;
 }
 
-/* Efeito hover - IGUAL AO FOOTER */
+
 header nav ul li a:hover::after,
 header nav ul li a:focus-visible::after {
     width: 100%;
