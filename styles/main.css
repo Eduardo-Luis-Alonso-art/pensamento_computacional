@@ -44,11 +44,14 @@ header .logo-unifil img {
     transition: transform 0.3s ease; /* Adiciona animação */
 }
 
+h/* ==========================
+   HEADER COM ANIMAÇÃO DO FOOTER
+=========================== */
 header nav {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding-right: 1.25rem; /* 20px → 1.25rem */
+    padding-right: 1.25rem;
 }
 
 header nav ul {
@@ -56,7 +59,7 @@ header nav ul {
     padding: 0;
     margin: 0;
     display: flex;
-    gap: 1rem; /* Substitui as margens laterais */
+    gap: 1rem;
 }
 
 header nav ul li a {
@@ -65,21 +68,30 @@ header nav ul li a {
     text-decoration: none;
     font-weight: bold;
     text-transform: uppercase;
-    font-size: 1rem; /* 16px → 1rem */
-    padding-bottom: 0.3125rem; /* 5px → 0.3125rem */
+    font-size: 1rem;
+    padding-bottom: 0.3125rem;
+    transition: color 0.3s ease; /* Transição para a cor do texto */
+    white-space: nowrap; /* Mantém o texto em uma linha */
 }
 
-/* Efeito hover mantido */
+/* Efeito de underline laranja - IGUAL AO FOOTER */
 header nav ul li a::after {
     content: "";
     position: absolute;
     left: 0;
     bottom: 0;
-    height: 2px;
     width: 0;
+    height: 2px;
     background-color: orange;
     transition: width 0.6s ease;
 }
+
+/* Efeito hover - IGUAL AO FOOTER */
+header nav ul li a:hover::after,
+header nav ul li a:focus-visible::after {
+    width: 100%;
+}
+
 
 /* --- Versão Mobile (max-width: 768px) --- */
 @media (max-width: 768px) {
