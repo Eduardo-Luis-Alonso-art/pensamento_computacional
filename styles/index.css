@@ -1205,3 +1205,27 @@
     color: #444;
     margin-bottom: 1.5rem;
 }
+
+/* Responsividade para telas menores */
+@media (max-width: 900px) {
+  .homenagens {
+    flex-direction: column; /* Instrutores em cima, aluno embaixo */
+    height: auto; /* altura automática */
+  }
+
+  .scroll-box {
+    max-height: 700px; /* libera a altura do scroll-box */
+    overflow-y: visible; /* não corta conteúdo no mobile */
+  }
+
+  .depoimentos,
+  .aluno-destaque {
+    width: 100%;
+    flex: none;
+  }
+
+  .aluno-destaque {
+    margin-top: 1rem;
+  }
+}
+}
