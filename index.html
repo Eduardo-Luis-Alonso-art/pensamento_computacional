@@ -312,70 +312,30 @@
         <p class="subtitulo-galeria">Reviva os melhores momentos de cada ano</p>
         
         <div class="navegacao-anos">
-            <button class="ano-btn ativo" data-ano="2022">2022</button>
-            <button class="ano-btn ativo" data-ano="2023">2023</button>
+            <button class="ano-btn" data-ano="2022">2022</button>
+            <button class="ano-btn" data-ano="2023">2023</button>
             <button class="ano-btn" data-ano="2024">2024</button>
-            <button class="ano-btn" data-ano="2025">2025</button>
+            <button class="ano-btn ativo" data-ano="2025">2025</button>
         </div>
     </div>
 
-        <div class="galeria-anos">
+
+    <div class="galeria-anos">
         <!-- Ano 2022 -->
-        <div class="ano-container ativo" id="ano-2022">
+        <div class="ano-container" id="ano-2022">
             <div class="header-ano">
                 <h3>2022</h3>
             </div>
-            
-            <div class="carrossel-galeria">
-                <div class="foto-item">
-                    <div class="foto-wrapper">
-                        <img src="img/2022/" alt="Monitores da turma B de 2023" loading="lazy">
-                        <div class="info-foto">
-                            <span class="foto-titulo">Monitores da Turma B</span>
-                            <span class="foto-data">Março 2023</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="foto-item">
-                    <div class="foto-wrapper">
-                        <img src="img/TurmaDoProfessorEron2023.jpg" alt="Turma do Professor Eron de 2023" loading="lazy">
-                        <div class="info-foto">
-                            <span class="foto-titulo">Turma do Professor Eron</span>
-                            <span class="foto-data">Novembro 2023</span>
-                        </div>
-                    </div>
-                </div>
+            <div class="carrossel-galeria" id="carrossel-2022">
             </div>
         </div>
-
-    <div class="galeria-anos">
+        
         <!-- Ano 2023 -->
-        <div class="ano-container ativo" id="ano-2023">
+        <div class="ano-container" id="ano-2023">
             <div class="header-ano">
                 <h3>2023</h3>
             </div>
-            
-            <div class="carrossel-galeria">
-                <div class="foto-item">
-                    <div class="foto-wrapper">
-                        <img src="img/MonitoresTurmaB2023.PNG" alt="Monitores da turma B de 2023" loading="lazy">
-                        <div class="info-foto">
-                            <span class="foto-titulo">Monitores da Turma B</span>
-                            <span class="foto-data">Março 2023</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="foto-item">
-                    <div class="foto-wrapper">
-                        <img src="img/TurmaDoProfessorEron2023.jpg" alt="Turma do Professor Eron de 2023" loading="lazy">
-                        <div class="info-foto">
-                            <span class="foto-titulo">Turma do Professor Eron</span>
-                            <span class="foto-data">Novembro 2023</span>
-                        </div>
-                    </div>
-                </div>
+            <div class="carrossel-galeria" id="carrossel-2023">
             </div>
         </div>
 
@@ -384,54 +344,31 @@
             <div class="header-ano">
                 <h3>2024</h3>
             </div>
-            
-            <div class="carrossel-galeria">
-                <div class="foto-item">
-                    <div class="foto-wrapper">
-                        <img src="img/AlunosDestaques2024.png" alt="Alunos destaques de 2024" loading="lazy">
-                        <div class="info-foto">
-                            <span class="foto-titulo">Alunos Destaques</span>
-                            <span class="foto-data">Abril 2024</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="foto-item">
-                    <div class="foto-wrapper">
-                        <img src="img/TodasAsTurmasDe2024.JPG" alt="Todas as Turmas de 2024" loading="lazy">
-                        <div class="info-foto">
-                            <span class="foto-titulo">Todas as Turmas</span>
-                            <span class="foto-data">Junho 2024</span>
-                        </div>
-                    </div>
-                </div>
+            <div class="carrossel-galeria" id="carrossel-2024">
             </div>
         </div>
 
         <!-- Ano 2025 -->
-        <div class="ano-container" id="ano-2025">
+        <div class="ano-container ativo" id="ano-2025">
             <div class="header-ano">
                 <h3>2025</h3>
             </div>
-            
-            <div class="mensagem-futuro">
-                <p>Nossas memórias de 2025 estão sendo criadas agora!</p>
-                <p>Volte em breve para conferir.</p>
+            <div class="carrossel-galeria" id="carrossel-2025">
             </div>
         </div>
     </div>
 
-    <!-- Lightbox Mobile -->
-    <div class="lightbox-mobile">
-        <div class="lightbox-content">
-            <span class="fechar-lightbox">&times;</span>
-            <img id="lightbox-imagem-mobile" alt="Imagem ampliada">
-            <div class="lightbox-info">
-                <h4 id="lightbox-titulo-mobile"></h4>
-                <p id="lightbox-data-mobile"></p>
+        <!-- Lightbox Mobile -->
+        <div class="lightbox-mobile">
+            <div class="lightbox-content">
+                <span class="fechar-lightbox">&times;</span>
+                <img id="lightbox-imagem-mobile" alt="Imagem ampliada">
+                <div class="lightbox-info">
+                    <h4 id="lightbox-titulo-mobile"></h4>
+                    <p id="lightbox-data-mobile"></p>
+                </div>
             </div>
         </div>
-    </div>
 </section>
 
 <section class="link-unifil-box">
@@ -475,6 +412,10 @@
     </div>
 </footer>
 
-<script src="script.js"></script>
+<script src="/RecordacoesPC/script.js"></script>
+<script src="/RecordacoesPC/galeria-data.js" defer></script>
+<script src="/RecordacoesPC/galeria-loader.js" defer></script>
+<script src="/RecordacoesPC/paginacao-galeria.js" defer></script>
+<script src="/RecordacoesPC/carregar-mais.js" defer></script>
 </body>
 </html>

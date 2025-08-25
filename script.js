@@ -20,9 +20,39 @@ window.addEventListener('resize', () => {
 });
 
 // =====================================
+// NAVEGAÇÃO ENTRE ANOS DA GALERIA
+// =====================================
+document.addEventListener('DOMContentLoaded', function() {
+    const anoButtons = document.querySelectorAll('.ano-btn');
+    const anoContainers = document.querySelectorAll('.ano-container');
+    
+    // Função para mostrar o ano selecionado
+    function showAno(ano) {
+        // Remove a classe ativo de todos os botões e containers
+        anoButtons.forEach(btn => btn.classList.remove('ativo'));
+        anoContainers.forEach(container => container.classList.remove('ativo'));
+        
+        // Adiciona a classe ativo ao botão e container correspondentes
+        document.querySelector(`.ano-btn[data-ano="${ano}"]`).classList.add('ativo');
+        document.getElementById(`ano-${ano}`).classList.add('ativo');
+    }
+    
+    // Adiciona event listeners aos botões
+    anoButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const ano = this.getAttribute('data-ano');
+            showAno(ano);
+        });
+    });
+    
+    // Inicializa com o ano 2025 ativo (já está pelo HTML, mas garantindo)
+    showAno('2025');
+});
+
+// =====================================
 // ANIMAÇÃO DE ENTRADA DAS IMAGENS DA GALERIA
 // =====================================
-const galeriaImages = document.querySelectorAll('.ano-galeria img');
+const galeriaImages = document.querySelectorAll('.ano-container.ativo img');
 
 const galleryObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
@@ -36,6 +66,8 @@ const galleryObserver = new IntersectionObserver((entries) => {
   threshold: [0, 0.3],
   rootMargin: '0px 0px -10% 0px'
 });
+
+galeriaImages.forEach(image => galleryObserver.observe(image));
 
 galeriaImages.forEach(image => galleryObserver.observe(image));
 
