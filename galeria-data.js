@@ -161,925 +161,248 @@ const galeriaData = {
             alt: "Turma G no primeiro dia de atividades"
         }
     ],
-    "2024": [
-        {
-            src: "img/2024/DSC_7697.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_7700.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_7702.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_7704.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_7705.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_7707.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_7708.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_7711.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_7712.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_7714.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_7717.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_7719.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_7720.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_7734.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_7747.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_7787.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_7846.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_7859.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_7869.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_7876.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_7884.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_7889.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_7893.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_7903.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_7908.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_7911.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_7912.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_7915.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_7919.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_7921.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_7922.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_7926.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_7930.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_7933.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_7939.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_7941.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_7945.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_7947.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_7950.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_7955.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_7960.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_7962.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_7966.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_7967.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_7968.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_7971.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_7972.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_7973.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_7974.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_7979.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_7987.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_7991.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_7992.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_7996.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_7998.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8000.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8004.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8005.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8016.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8023.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8026.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8028.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8030.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8032.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8034.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8035.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8039.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8041.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8042.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8045.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8046.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8048.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8051.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8052.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8053.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8056.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8058.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8059.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8062.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8063.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8065.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8068.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8070.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8073.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8074.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8075.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8077.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8079.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8082.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8083.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8085.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8087.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8089.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8091.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8093.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8095.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8097.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8099.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8101.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8103.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8105.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8107.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8109.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8111.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8113.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8119.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8121.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8124.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8125.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8127.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8129.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8132.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8134.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8136.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8140.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8141.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8144.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8146.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8148.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8151.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8154.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8157.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8158.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8161.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8164.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8169.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8170.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8175.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8179.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8182.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8191.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8192.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8196.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8208.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8221.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8222.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8227.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8228.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8230.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8231.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8232.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8233.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8234.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8235.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8238.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8239.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8240.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8241.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8242.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8244.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8245.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8246.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
-        {
-            src: "img/2024/DSC_8247.JPG",
-            titulo: "Formatura 2024",
-            data: "2024",
-            alt: "Formatura Pensamento Computacional de 2024"
-        },
+"2024": [
+    {
+        src: "img/2024/DSC_7697.webp",
+        titulo: "Formatura 2024",
+        data: "2024",
+        alt: "Formatura Pensamento Computacional de 2024"
+    },
+    {
+        src: "img/2024/DSC_7700.webp",
+        titulo: "Formatura 2024",
+        data: "2024",
+        alt: "Formatura Pensamento Computacional de 2024"
+    },
+    {
+        src: "img/2024/DSC_7705.webp",
+        titulo: "Formatura 2024",
+        data: "2024",
+        alt: "Formatura Pensamento Computacional de 2024"
+    },
+    {
+        src: "img/2024/DSC_7707.webp",
+        titulo: "Formatura 2024",
+        data: "2024",
+        alt: "Formatura Pensamento Computacional de 2024"
+    },
+    {
+        src: "img/2024/DSC_7711.webp",
+        titulo: "Formatura 2024",
+        data: "2024",
+        alt: "Formatura Pensamento Computacional de 2024"
+    },
+    {
+        src: "img/2024/DSC_7717.webp",
+        titulo: "Formatura 2024",
+        data: "2024",
+        alt: "Formatura Pensamento Computacional de 2024"
+    },
+    {
+        src: "img/2024/DSC_7720.webp",
+        titulo: "Formatura 2024",
+        data: "2024",
+        alt: "Formatura Pensamento Computacional de 2024"
+    },
+
+    {
+        src: "img/2024/DSC_7747.webp",
+        titulo: "Formatura 2024",
+        data: "2024",
+        alt: "Formatura Pensamento Computacional de 2024"
+    },
+    {
+        src: "img/2024/DSC_7787.webp",
+        titulo: "Formatura 2024",
+        data: "2024",
+        alt: "Formatura Pensamento Computacional de 2024"
+    },
+    {
+        src: "img/2024/DSC_7846.webp",
+        titulo: "Formatura 2024",
+        data: "2024",
+        alt: "Formatura Pensamento Computacional de 2024"
+    },
+    {
+        src: "img/2024/DSC_7859.webp",
+        titulo: "Formatura 2024",
+        data: "2024",
+        alt: "Formatura Pensamento Computacional de 2024"
+    },
+    {
+        src: "img/2024/DSC_7869.webp",
+        titulo: "Formatura 2024",
+        data: "2024",
+        alt: "Formatura Pensamento Computacional de 2024"
+    },
+    {
+        src: "img/2024/DSC_7876.webp",
+        titulo: "Formatura 2024",
+        data: "2024",
+        alt: "Formatura Pensamento Computacional de 2024"
+    },
+    {
+        src: "img/2024/DSC_7893.webp",
+        titulo: "Formatura 2024",
+        data: "2024",
+        alt: "Formatura Pensamento Computacional de 2024"
+    },
+    {
+        src: "img/2024/DSC_7908.webp",
+        titulo: "Formatura 2024",
+        data: "2024",
+        alt: "Formatura Pensamento Computacional de 2024"
+    },
+    {
+        src: "img/2024/DSC_7911.webp",
+        titulo: "Formatura 2024",
+        data: "2024",
+        alt: "Formatura Pensamento Computacional de 2024"
+    },
+    {
+        src: "img/2024/DSC_7915.webp",
+        titulo: "Formatura 2024",
+        data: "2024",
+        alt: "Formatura Pensamento Computacional de 2024"
+    },
+    {
+        src: "img/2024/DSC_7987.webp",
+        titulo: "Formatura 2024",
+        data: "2024",
+        alt: "Formatura Pensamento Computacional de 2024"
+    },
+    {
+        src: "img/2024/DSC_7991.webp",
+        titulo: "Formatura 2024",
+        data: "2024",
+        alt: "Formatura Pensamento Computacional de 2024"
+    },
+    {
+        src: "img/2024/DSC_7998.webp",
+        titulo: "Formatura 2024",
+        data: "2024",
+        alt: "Formatura Pensamento Computacional de 2024"
+    },
+    {
+        src: "img/2024/DSC_8062.webp",
+        titulo: "Formatura 2024",
+        data: "2024",
+        alt: "Formatura Pensamento Computacional de 2024"
+    },
+    {
+        src: "img/2024/DSC_8070.webp",
+        titulo: "Formatura 2024",
+        data: "2024",
+        alt: "Formatura Pensamento Computacional de 2024"
+    },
+    {
+        src: "img/2024/DSC_8075.webp",
+        titulo: "Formatura 2024",
+        data: "2024",
+        alt: "Formatura Pensamento Computacional de 2024"
+    },
+    {
+        src: "img/2024/DSC_8077.webp",
+        titulo: "Formatura 2024",
+        data: "2024",
+        alt: "Formatura Pensamento Computacional de 2024"
+    },
+    {
+        src: "img/2024/DSC_8103.webp",
+        titulo: "Formatura 2024",
+        data: "2024",
+        alt: "Formatura Pensamento Computacional de 2024"
+    },
+    {
+        src: "img/2024/DSC_8121.webp",
+        titulo: "Formatura 2024",
+        data: "2024",
+        alt: "Formatura Pensamento Computacional de 2024"
+    },
+    {
+        src: "img/2024/DSC_8125.webp",
+        titulo: "Formatura 2024",
+        data: "2024",
+        alt: "Formatura Pensamento Computacional de 2024"
+    },
+    {
+        src: "img/2024/DSC_8127.webp",
+        titulo: "Formatura 2024",
+        data: "2024",
+        alt: "Formatura Pensamento Computacional de 2024"
+    },
+    {
+        src: "img/2024/DSC_8129.webp",
+        titulo: "Formatura 2024",
+        data: "2024",
+        alt: "Formatura Pensamento Computacional de 2024"
+    },
+    {
+        src: "img/2024/DSC_8141.webp",
+        titulo: "Formatura 2024",
+        data: "2024",
+        alt: "Formatura Pensamento Computacional de 2024"
+    },
+    {
+        src: "img/2024/DSC_8144.webp",
+        titulo: "Formatura 2024",
+        data: "2024",
+        alt: "Formatura Pensamento Computacional de 2024"
+    },
+    {
+        src: "img/2024/DSC_8148.webp",
+        titulo: "Formatura 2024",
+        data: "2024",
+        alt: "Formatura Pensamento Computacional de 2024"
+    },
+    {
+        src: "img/2024/DSC_8154.webp",
+        titulo: "Formatura 2024",
+        data: "2024",
+        alt: "Formatura Pensamento Computacional de 2024"
+    },
+    {
+        src: "img/2024/DSC_8158.webp",
+        titulo: "Formatura 2024",
+        data: "2024",
+        alt: "Formatura Pensamento Computacional de 2024"
+    },
+    {
+        src: "img/2024/DSC_8164.webp",
+        titulo: "Formatura 2024",
+        data: "2024",
+        alt: "Formatura Pensamento Computacional de 2024"
+    },
+    {
+        src: "img/2024/DSC_8170.webp",
+        titulo: "Formatura 2024",
+        data: "2024",
+        alt: "Formatura Pensamento Computacional de 2024"
+    },
+    {
+        src: "img/2024/DSC_8175.webp",
+        titulo: "Formatura 2024",
+        data: "2024",
+        alt: "Formatura Pensamento Computacional de 2024"
+    },
+    {
+        src: "img/2024/DSC_8179.webp",
+        titulo: "Formatura 2024",
+        data: "2024",
+        alt: "Formatura Pensamento Computacional de 2024"
+    },
+    {
+        src: "img/2024/DSC_8196.webp",
+        titulo: "Formatura 2024",
+        data: "2024",
+        alt: "Formatura Pensamento Computacional de 2024"
+    },
+    {
+        src: "img/2024/DSC_8240.webp",
+        titulo: "Formatura 2024",
+        data: "2024",
+        alt: "Formatura Pensamento Computacional de 2024"
+    }
     ],
     "2025": [
         {
