@@ -1,3 +1,84 @@
+// ============================
+// CONTROLE DO MENU HAMBURGER 
+// ============================
+document.addEventListener('DOMContentLoaded', function() {
+    // Elementos do menu
+    const hamburgerBtn = document.querySelector('.hamburger-btn');
+    const navMobile = document.querySelector('.nav-mobile');
+    const closeBtn = document.querySelector('.close-btn');
+    const navDesktop = document.querySelector('.nav-desktop');
+    
+    // Verificar se elementos existem
+    if (!hamburgerBtn || !navMobile || !closeBtn) {
+        console.error('Elementos do menu mobile não encontrados!');
+        return;
+    }
+    
+    // Criar overlay
+    const overlay = document.createElement('div');
+    overlay.className = 'menu-overlay';
+    document.body.appendChild(overlay);
+    
+    // Função para abrir menu
+    function openMenu() {
+        navMobile.classList.add('active');
+        overlay.classList.add('active');
+        document.body.classList.add('menu-open');
+        hamburgerBtn.classList.add('active');
+    }
+    
+    // Função para fechar menu
+    function closeMenu() {
+        navMobile.classList.remove('active');
+        overlay.classList.remove('active');
+        document.body.classList.remove('menu-open');
+        hamburgerBtn.classList.remove('active');
+    }
+    
+    // Event listeners
+    hamburgerBtn.addEventListener('click', openMenu);
+    closeBtn.addEventListener('click', closeMenu);
+    overlay.addEventListener('click', closeMenu);
+    
+    // Fechar menu ao clicar em links (mobile)
+    const navLinks = navMobile.querySelectorAll('a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            // Se for link âncora, fazer scroll suave
+            const href = this.getAttribute('href');
+            if (href.startsWith('#')) {
+                e.preventDefault();
+                closeMenu();
+                
+                setTimeout(() => {
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                }, 300);
+            } else {
+                closeMenu();
+            }
+        });
+    });
+    
+    // Fechar com tecla ESC
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && navMobile.classList.contains('active')) {
+            closeMenu();
+        }
+    });
+    
+    // Debug no console
+    console.log('✅ Menu hamburger carregado com sucesso!');
+    console.log('Hamburger button:', hamburgerBtn);
+    console.log('Nav mobile:', navMobile);
+    console.log('Close button:', closeBtn);
+});
+
 // =====================================
 // CARROSSEL DE INSTRUTORES (SLIDES AUTOMÁTICOS)
 // =====================================

@@ -12,6 +12,7 @@
 
 body {
     font-family: 'Righteous', sans-serif;
+    color: #2b2b2b;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
@@ -21,45 +22,42 @@ body {
     overflow-x: hidden;
 }
 
-/* =======================
-   HEADER - Menu Superior (Responsivo)
-========================== */
+/* ==========================
+   HEADER E NAVEGAÇÃO RESPONSIVA
+=========================== */
 header {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: #fff;
-    padding: 1.25rem 5%; 
+    background: white;
     z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.8);
-    flex-wrap: wrap; 
+    padding: 1rem 2rem;
 }
 
-header .logo-unifil img {
-    height: 3.75rem;
+/* Logo */
+.logo-unifil img {
+    height: 50px;
     width: auto;
-    transition: transform 0.3s ease; 
 }
 
-header nav {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding-right: 1.25rem;
+/* ========== MENU DESKTOP ========== */
+.nav-desktop {
+    display: block;
 }
 
-header nav ul {
+.nav-desktop ul {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
-    gap: 1rem;
+    gap: 2rem;
 }
 
-header nav ul li a {
+.nav-desktop ul li a {
     position: relative;
     color: #2b2b2b;
     text-decoration: none;
@@ -67,12 +65,11 @@ header nav ul li a {
     text-transform: uppercase;
     font-size: 1rem;
     padding-bottom: 0.3125rem;
-    transition: color 0.3s ease; 
-    white-space: nowrap; 
+    transition: color 0.3s ease;
+    white-space: nowrap;
 }
 
-
-header nav ul li a::after {
+.nav-desktop ul li a::after {
     content: "";
     position: absolute;
     left: 0;
@@ -83,37 +80,209 @@ header nav ul li a::after {
     transition: width 0.6s ease;
 }
 
-
-header nav ul li a:hover::after,
-header nav ul li a:focus-visible::after {
+.nav-desktop ul li a:hover::after,
+.nav-desktop ul li a:focus-visible::after {
     width: 100%;
 }
 
+/* ========== BOTÃO HAMBURGER ========== */
+.hamburger-btn {
+    display: none;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    width: 30px;
+    height: 30px;
+    justify-content: space-between;
+}
 
-/* --- Versão Mobile (max-width: 768px) --- */
+.hamburger-btn span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: #2b2b2b;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+/* Animação do hamburger quando aberto */
+.hamburger-btn.active span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+
+.hamburger-btn.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-btn.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* ========== MENU MOBILE ========== */
+.nav-mobile {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 300px;
+    height: 100vh;
+    background: white;
+    z-index: 1001;
+    box-shadow: -5px 0 25px rgba(0,0,0,0.1);
+    transition: right 0.4s ease;
+}
+
+.nav-mobile.active {
+    right: 0;
+}
+
+.nav-mobile-content {
+    padding: 4rem 2rem 2rem;
+    height: 100%;
+    position: relative;
+}
+
+/* Botão fechar */
+.close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #2b2b2b;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.close-btn:hover {
+    color: orange;
+}
+
+/* Lista do menu mobile */
+.nav-mobile ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-mobile ul li {
+    margin-bottom: 1.5rem;
+}
+
+.nav-mobile ul li a {
+    color: #2b2b2b;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 0.5rem 0;
+    display: block;
+    transition: color 0.3s ease;
+    text-transform: uppercase;
+}
+
+.nav-mobile ul li a:hover {
+    color: orange;
+}
+
+/* Overlay quando menu está aberto */
+.menu-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 1000;
+}
+
+.menu-overlay.active {
+    display: block;
+}
+/* ========== OVERLAY DO MENU ========== */
+.menu-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.menu-overlay.active {
+    display: block;
+    opacity: 1;
+}
+
+/* ========== MEDIA QUERIES ========== */
+
+/* Tablets (768px) */
 @media (max-width: 768px) {
+    .hamburger-btn {
+        display: flex;
+    }
+    
+    .nav-desktop {
+        display: none;
+    }
+    
+    .nav-mobile {
+        display: block;
+    }
+    
+    /* Ajusta padding do header em mobile */
     header {
-        flex-wrap: wrap; /* Permite quebra de linha */
-        padding: 15px 5%; /* Reduz padding */
+        padding: 1rem;
     }
-
+    
     .logo-unifil img {
-        height: 50px; /* Reduz logo */
+        height: 40px;
     }
+}
 
-    nav {
-        width: 100%;
-        margin-top: 15px;
+/* Celulares pequenos (480px) */
+@media (max-width: 480px) {
+    .nav-mobile {
+        width: 85%;
     }
-
-    nav ul {
-        flex-wrap: wrap; /* Itens podem quebrar linha */
-        justify-content: center;
-        gap: 10px 20px; /* Espaçamento entre itens */
+    
+    .nav-mobile-content {
+        padding: 3rem 1.5rem 1.5rem;
     }
+    
+    .nav-mobile ul li a {
+        font-size: 1.1rem;
+    }
+    
+    .close-btn {
+        top: 0.5rem;
+        right: 0.5rem;
+        font-size: 1.8rem;
+    }
+}
 
-    nav ul li a {
-        font-size: 14px; /* Reduz fonte */
+/* Ajuste para quando o menu está aberto */
+body.menu-open {
+    overflow: hidden;
+}
+
+/* Melhoria de acessibilidade */
+@media (prefers-reduced-motion: reduce) {
+    .nav-mobile,
+    .hamburger-btn span {
+        transition: none;
     }
 }
 

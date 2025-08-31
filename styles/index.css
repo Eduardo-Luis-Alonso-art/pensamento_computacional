@@ -987,19 +987,19 @@
     max-height: 58vh;
     object-fit: cover;
     display: block;
-    margin-top: 120px; /* Mantido em px para precisão */
-    margin-bottom: 40px; /* Mantido em px */
+    margin-top: 120px; 
+    margin-bottom: 40px; 
 }
 
 @media (max-width: 768px) {
     #imagem-banner img {
-        margin-top: 90px; /* Ajuste para header menor */
-        max-height: 50vh; /* Reduz altura */
+        margin-top: 90px; 
+        max-height: 50vh; 
     }
 
     .carrossel {
-        border-radius: 0; /* Remove bordas */
-        box-shadow: none; /* Remove sombra */
+        border-radius: 0; 
+        box-shadow: none; 
     }
 }
 
