@@ -414,52 +414,6 @@
     }
 }
 
-/* ===== CARREGAR MAIS COM ESTADO INDEPENDENTE ===== */
-.carregar-mais-container {
-    text-align: center;
-    margin: 25px 0 15px;
-    padding: 0 20px;
-}
-
-.carregar-mais-btn {
-    background: linear-gradient(145deg, #ff8c00, #ff6600);
-    color: white;
-    border: none;
-    padding: 14px 35px;
-    border-radius: 30px;
-    cursor: pointer;
-    font-weight: 600;
-    font-size: 15px;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(255, 140, 0, 0.3);
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.carregar-mais-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(255, 140, 0, 0.4);
-}
-
-.carregar-mais-btn:active {
-    transform: translateY(0);
-}
-
-/* Estado inicial - esconder fotos além das primeiras 6 */
-.foto-item.inicial {
-    display: block;
-}
-
-.foto-item.extra {
-    display: none;
-}
-
-/* Quando todas estão visíveis */
-.carrossel-galeria.todas-visiveis .foto-item.extra {
-    display: block;
-    animation: fadeIn 0.5s ease;
-}
 
 /* ================================
    SEÇÃO: Extras abaixo do Pensamento
@@ -1208,24 +1162,24 @@
 
 /* Responsividade para telas menores */
 @media (max-width: 900px) {
-  .homenagens {
-    flex-direction: column; /* Instrutores em cima, aluno embaixo */
-    height: auto; /* altura automática */
-  }
+.homenagens {
+flex-direction: column;
+height: auto; 
+}
 
-  .scroll-box {
-    max-height: 700px; /* libera a altura do scroll-box */
-    overflow-y: visible; /* não corta conteúdo no mobile */
-  }
+.scroll-box {
+max-height: 700px; 
+overflow-y: visible; 
+}
 
-  .depoimentos,
-  .aluno-destaque {
-    width: 100%;
-    flex: none;
-  }
+.depoimentos,
+.aluno-destaque {
+width: 100%;
+flex: none;
+}
 
-  .aluno-destaque {
-    margin-top: 1rem;
-  }
+.aluno-destaque {
+margin-top: 1rem;
+}
 }
 
