@@ -1,12 +1,12 @@
 @import url(main.css);
-@import url(paginaPrincipal/bannerCarrosel.css);
-@import url(paginaPrincipal/depoimentos.css);
-@import url(paginaPrincipal/extras.css);
-@import url(paginaPrincipal/galeria.css);
-@import url(paginaPrincipal/horariosCalendario.css);
-@import url(paginaPrincipal/monitores.css);
 @import url(paginaPrincipal/pensamento.css);
-@import url(paginaPrincipal/secaoModulos.css);
+@import url(paginaPrincipal/galeria.css);
+@import url(paginaPrincipal/extras.css);
+@import url(paginaPrincipal/modulos.css);
+@import url(paginaPrincipal/horarios.css);
+@import url(paginaPrincipal/monitores.css);
+@import url(paginaPrincipal/banner.css);
+@import url(paginaPrincipal/homenagens.css);
 
 * {
     margin: 0;

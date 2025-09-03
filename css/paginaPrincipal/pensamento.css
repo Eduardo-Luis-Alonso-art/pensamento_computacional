@@ -47,31 +47,32 @@
     .pensamento-box {
         max-width: 90%;
     }
-    
+
     .pensamento-box h2 {
         font-size: 36px;
     }
-    
+
     .pensamento-box p {
         font-size: 22px;
     }
 }
 
 @media (max-width: 992px) {
+
     #pensamento,
     #porque-fazer {
         padding: 40px 30px;
     }
-    
+
     .pensamento-box {
         padding: 25px;
     }
-    
+
     .pensamento-box h2 {
         font-size: 32px;
         margin-bottom: 25px;
     }
-    
+
     .pensamento-box p {
         font-size: 20px;
         padding: 0 15px 15px 15px;
@@ -82,11 +83,11 @@
     .pensamento-box {
         max-width: 95%;
     }
-    
+
     .pensamento-box h2 {
         font-size: 28px;
     }
-    
+
     .pensamento-box p {
         font-size: 18px;
         line-height: 1.5;
@@ -94,22 +95,24 @@
 }
 
 @media (max-width: 576px) {
+
     #pensamento,
     #porque-fazer {
         padding: 30px 15px;
     }
-    
+
     .pensamento-box {
         padding: 20px;
         border-radius: 6px;
     }
-    
+
     .pensamento-box h2 {
         font-size: 24px;
         margin-bottom: 20px;
     }
-    
+
     .pensamento-box p {
+        text-align: left;
         text-align: justify;
         hyphens: auto;
     }

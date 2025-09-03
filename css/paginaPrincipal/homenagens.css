@@ -1,0 +1,119 @@
+.homenagens {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+    height: 600px;
+    background-color: #FFA500;
+    overflow: hidden;
+}
+
+.depoimentos {
+    font-size: 14px;
+    flex: 2;
+    background-color: white;
+    border-radius: 20px;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+}
+
+.scroll-box {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.conteudo {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.depoimento {
+    padding: 1rem;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+.depoimento h3 {
+    margin: 0;
+    color: #8B4513;
+}
+
+.depoimento p {
+    color: #333;
+    margin-top: 0.5rem;
+    line-height: 1.5;
+}
+
+.aluno-destaque {
+    flex: 1;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.foto {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #FFA500;
+}
+
+.foto-professor {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #FFA500;
+    margin-bottom: 0.5rem;
+}
+
+.sessao-depoimentos {
+    padding-top: 3%;
+    background-color: #FFA500;
+}
+
+.titulo-depoimentos {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #8B4513;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.subtitulo-depoimentos {
+    text-align: center;
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 1.5rem;
+}
+
+@media (max-width: 900px) {
+    .homenagens {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .scroll-box {
+        max-height: 700px;
+        overflow-y: visible;
+    }
+
+    .depoimentos,
+    .aluno-destaque {
+        width: 100%;
+        flex: none;
+    }
+
+    .aluno-destaque {
+        margin-top: 1rem;
+    }
+}
