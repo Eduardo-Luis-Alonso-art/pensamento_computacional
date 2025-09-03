@@ -1,0 +1,12 @@
+import './menu.js';
+import './carrosselInstrutores.js';
+import './galeriaAnos.js';
+import './galeriaAnimacoes.js';
+import './calendario.js';
+import './tabelaHorarios.js';
+import './pensamentoComputacional.js';
+import './scrollBox.js';
+import './carrosselMonitores.js';
+import './headerScroll.js';
+import './lightboxMobile.js';
+import './feedbackTouch.js';

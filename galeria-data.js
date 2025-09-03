@@ -1,4 +1,3 @@
-// dados-galeria.js
 const galeriaData = {
     "2022": [
         {

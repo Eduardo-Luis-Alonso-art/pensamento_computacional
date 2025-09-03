@@ -1,0 +1,417 @@
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: white;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.logo-unifil img {
+    height: 50px;
+    width: auto;
+}
+
+.nav-desktop {
+    display: block;
+}
+
+.nav-desktop ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-desktop ul li a {
+    position: relative;
+    color: #2b2b2b;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1rem;
+    padding-bottom: 0.3125rem;
+    transition: color 0.3s ease;
+    white-space: nowrap;
+}
+
+.nav-desktop ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: orange;
+    transition: width 0.6s ease;
+}
+
+.nav-desktop ul li a:hover::after,
+.nav-desktop ul li a:focus-visible::after {
+    width: 100%;
+}
+
+.hamburger-btn {
+    display: none;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    width: 30px;
+    height: 30px;
+    justify-content: space-between;
+}
+
+.hamburger-btn span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: #2b2b2b;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.hamburger-btn.active span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+
+.hamburger-btn.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-btn.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+.nav-mobile {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 300px;
+    height: 100vh;
+    background: white;
+    z-index: 1001;
+    box-shadow: -5px 0 25px rgba(0, 0, 0, 0.1);
+    transition: right 0.4s ease;
+}
+
+.nav-mobile.active {
+    right: 0;
+}
+
+.nav-mobile-content {
+    padding: 4rem 2rem 2rem;
+    height: 100%;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #2b2b2b;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.close-btn:hover {
+    color: orange;
+}
+
+.nav-mobile ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-mobile ul li {
+    margin-bottom: 1.5rem;
+}
+
+.nav-mobile ul li a {
+    color: #2b2b2b;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 0.5rem 0;
+    display: block;
+    transition: color 0.3s ease;
+    text-transform: uppercase;
+}
+
+.nav-mobile ul li a:hover {
+    color: orange;
+}
+
+.menu-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.menu-overlay.active {
+    display: block;
+}
+
+.menu-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.menu-overlay.active {
+    display: block;
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .hamburger-btn {
+        display: flex;
+    }
+
+    .nav-desktop {
+        display: none;
+    }
+
+    .nav-mobile {
+        display: block;
+    }
+
+    header {
+        padding: 1rem;
+    }
+
+    .logo-unifil img {
+        height: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-mobile {
+        width: 85%;
+    }
+
+    .nav-mobile-content {
+        padding: 3rem 1.5rem 1.5rem;
+    }
+
+    .nav-mobile ul li a {
+        font-size: 1.1rem;
+    }
+
+    .close-btn {
+        top: 0.5rem;
+        right: 0.5rem;
+        font-size: 1.8rem;
+    }
+}
+
+body.menu-open {
+    overflow: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .nav-mobile,
+    .hamburger-btn span {
+        transition: none;
+    }
+}
+
+footer {
+    background-color: #fff;
+    color: #2b2b2b;
+    padding: 40px 20px;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    gap: 30px;
+}
+
+.footer-logo {
+    flex: 1 0 100%;
+    text-align: center;
+    order: 1;
+}
+
+.footer-logo img {
+    max-width: 150px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.footer-logo img:hover {
+    transform: scale(1.05);
+}
+
+.footer-nav-container {
+    flex: 2 0 auto;
+    order: 3;
+    width: 100%;
+}
+
+.footer-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.footer-nav ul li a {
+    position: relative;
+    color: #2b2b2b;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+    white-space: nowrap;
+}
+
+.footer-nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: orange;
+    transition: width 0.6s ease;
+}
+
+.footer-nav ul li a:hover::after,
+.footer-nav ul li a:focus-visible::after {
+    width: 100%;
+}
+
+.redes-sociais {
+    flex: 1 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    order: 2;
+    margin-bottom: 20px;
+}
+
+.redes-sociais a {
+    display: inline-block;
+}
+
+.redes-sociais img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.redes-sociais img:hover,
+.redes-sociais img:focus-visible {
+    transform: scale(1.1);
+}
+
+.footer-direitos {
+    text-align: center;
+    font-size: 13px;
+    color: #888;
+    margin-top: 40px;
+    width: 100%;
+    order: 4;
+}
+
+@media (min-width: 768px) {
+    .footer-content {
+        flex-wrap: nowrap;
+        gap: 40px;
+    }
+
+    .footer-logo {
+        flex: 0 0 auto;
+        order: 1;
+        text-align: left;
+    }
+
+    .footer-nav-container {
+        order: 2;
+        width: auto;
+    }
+
+    .redes-sociais {
+        order: 3;
+        margin-bottom: 0;
+    }
+
+    .footer-nav ul {
+        justify-content: flex-start;
+    }
+}
+
+@media (min-width: 992px) {
+    .footer-nav ul {
+        gap: 25px;
+    }
+
+    .footer-logo img {
+        max-width: 180px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .footer-nav ul li a {
+        font-size: 13px;
+    }
+
+    .redes-sociais img {
+        width: 35px;
+        height: 35px;
+    }
+
+    footer {
+        padding: 30px 15px;
+    }
+}

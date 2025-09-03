@@ -1,0 +1,13 @@
+#extras-pensamento {
+    background-color: #f4f4f4;
+    padding: 60px 20px;
+}
+
+.extras-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    max-width: 90%;
+    margin: 0 auto;
+    gap: 30px;
+}

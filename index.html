@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,41 +8,24 @@
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./styles/index.css">
-    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="/css/globais.css">
 </head>
 
 <body>
-   <header>
-    <a href="index.html">
-        <div class="logo-unifil">
-            <img src="img/logo-unifil.png" alt="Logo da Unifil">
-        </div>
-    </a>
+    <header>
+        <a href="index.html">
+            <div class="logo-unifil">
+                <img src="img/logo-unifil.png" alt="Logo da Unifil">
+            </div>
+        </a>
 
-    <!-- Botão Hamburger -->
-    <button class="hamburger-btn" aria-label="Abrir menu">
-        <span></span>
-        <span></span>
-        <span></span>
-    </button>
+        <button class="hamburger-btn" aria-label="Abrir menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
 
-    <!-- Menu Desktop (original) -->
-    <nav class="nav-desktop">
-        <ul>
-            <li><a href="index.html">Início</a></li>
-            <li><a href="#homenagens">Depoimento Instrutores</a></li>
-            <li><a href="#monitores">Monitores</a></li>
-            <li><a href="#horarios">Horários</a></li>
-            <li><a href="#modulos">Módulos</a></li>
-            <li><a href="#fotos">Galeria</a></li>
-        </ul>
-    </nav>
-
-    <!-- Menu Mobile (adicione esta parte que estava faltando) -->
-    <nav class="nav-mobile">
-        <div class="nav-mobile-content">
-            <button class="close-btn" aria-label="Fechar menu">×</button>
+        <nav class="nav-desktop">
             <ul>
                 <li><a href="index.html">Início</a></li>
                 <li><a href="#homenagens">Depoimento Instrutores</a></li>
@@ -50,9 +34,22 @@
                 <li><a href="#modulos">Módulos</a></li>
                 <li><a href="#fotos">Galeria</a></li>
             </ul>
-        </div>
-    </nav>
-</header>
+        </nav>
+
+        <nav class="nav-mobile">
+            <div class="nav-mobile-content">
+                <button class="close-btn" aria-label="Fechar menu">×</button>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="#homenagens">Depoimento Instrutores</a></li>
+                    <li><a href="#monitores">Monitores</a></li>
+                    <li><a href="#horarios">Horários</a></li>
+                    <li><a href="#modulos">Módulos</a></li>
+                    <li><a href="#fotos">Galeria</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
     <section id="imagem-banner">
         <div class="carrossel">
@@ -103,132 +100,135 @@
         </div>
     </section>
 
-<section class="sessao-depoimentos" id="homenagens">
-    <h2 class="titulo-depoimentos">Depoimentos dos Instrutores</h2>
-    <p class="subtitulo-depoimentos">Veja o que os instrutores disseram sobre o projeto!</p>
-</section>
+    <section class="sessao-depoimentos" id="homenagens">
+        <h2 class="titulo-depoimentos">Depoimentos dos Instrutores</h2>
+        <p class="subtitulo-depoimentos">Veja o que os instrutores disseram sobre o projeto!</p>
+    </section>
 
-<section class="homenagens">
-    <div class="depoimentos">
-        <div class="scroll-box" id="scrollBox">
-            <div class="conteudo" id="conteudo">
-                <div class="depoimento">
-                    <img src="img/EronPonce.jpg" alt="Instrutor Eron" class="foto-professor">
-                    <h3>Inst. Eron</h3>
-                    <p>"O projeto do pensamento computacional me mudou nos longos desses 3 anos, me permitiu ganhar
-                        experiencias que nunca teria pensado em adquirir, é ótimo
-                        saber que você está realizando algo que você gosta. A interação com os alunos e entendimento
-                        aprofundado me ajudou muito em minha caminhada e em minha
-                        opinião os monitores que passaram pelo pensamento computacional amadureceram, entendendo
-                        processos e como ajudar outras pessoas, isso é ótimo para a
-                        sociedade e imagino que esse projeto realmente consiga impactar o ecossistema de Londrina."
-                    </p>
-                </div>
-                <div class="depoimento">
-                    <img src="img/GeovanaAndrade.jpg" alt="Instrutora Geovana" class="foto-professor">
-                    <h3>Inst. Geovana</h3>
-                    <p>"Fui professora no Pensamento Computacional e, durante minha experiência, tive a oportunidade
-                        de contribuir para a formação de jovens do ensino médio no
-                        aprendizado de lógica de programação e programação básica. O curso, gratuito e acessível,
-                        foi uma oportunidade única de levar conhecimento a estudantes
-                        que, de outra forma, poderiam não ter acesso tão facilitado a essas ferramentas. Isso também
-                        contribui para colocar os alunos em contato com a área de
-                        tecnologia, onde eles podem descobrir afinidade e seguir carreira.
-                        <br>
-                        O impacto desse projeto foi transformador, tanto para os alunos quanto para mim. Ver o
-                        progresso e a curiosidade dos estudantes ao longo do curso foi
-                        extremamente gratificante e reforçou a importância de iniciativas que democratizam o ensino
-                        de tecnologia. Foi muito enriquecedor participar desse
-                        processo de construção de habilidades, não só técnicas, mas também de pensamento crítico e
-                        resolução de problemas.
-                        <br>
-                        Essa experiência também foi essencial para o meu próprio desenvolvimento, tanto no campo
-                        educacional quanto na compreensão do poder que a tecnologia tem
-                        para abrir novas perspectivas. Acredito que projetos como esse desempenham um papel
-                        fundamental ao proporcionar oportunidades de aprendizado e
-                        crescimento, preparando jovens para enfrentar os desafios do futuro."
-                    </p>
-                </div>
-                <div class="depoimento">
-                    <img src="img/MatheusVininius.jpg" alt="Instrutor Matheus" class="foto-professor">
-                    <h3>Inst. Matheus</h3>
-                    <p>"Minha experiência como professor nesse projeto foi extremamente gratificante. Enquanto
-                        ensinava conceitos e tecnologias atuais do mercado, também pude
-                        aprofundar meu conhecimento em tópicos importantes, com foco sempre nos fundamentos. Essa
-                        busca por entender melhor esses fundamentos me motivou a
-                        procurar novas ideias e inovações para compartilhar com meus alunos. O aprendizado foi uma
-                        via de mão dupla: cada interação e questionamento em sala de
-                        aula me ajudou a crescer profissional e pessoalmente. Essa troca de experiências tornou tudo
-                        ainda mais enriquecedor."
-                    </p>
-                </div>
-                <div class="depoimento">
-                    <img src="img/RenataGransoti.jpg" alt="Instrutora Renata" class="foto-professor">
-                    <h3>Inst. Renata</h3>
-                    <p>"Fui monitora em 2022 e instrutora em 2023 e 2024, foi uma experiência muito boa, onde
-                        consegui ensinar lógica de programação e como pensar
-                        computacionalmente. Consegui ver a evolução dos alunos no decorrer do curso e é muito
-                        gratificante saber que contribui através do ensino e uso
-                        de tecnologias na vida deles."
-                    </p>
+    <section class="homenagens">
+        <div class="depoimentos">
+            <div class="scroll-box" id="scrollBox">
+                <div class="conteudo" id="conteudo">
+                    <div class="depoimento">
+                        <img src="img/EronPonce.jpg" alt="Instrutor Eron" class="foto-professor">
+                        <h3>Inst. Eron</h3>
+                        <p>"O projeto do pensamento computacional me mudou nos longos desses 3 anos, me permitiu ganhar
+                            experiencias que nunca teria pensado em adquirir, é ótimo
+                            saber que você está realizando algo que você gosta. A interação com os alunos e entendimento
+                            aprofundado me ajudou muito em minha caminhada e em minha
+                            opinião os monitores que passaram pelo pensamento computacional amadureceram, entendendo
+                            processos e como ajudar outras pessoas, isso é ótimo para a
+                            sociedade e imagino que esse projeto realmente consiga impactar o ecossistema de Londrina."
+                        </p>
+                    </div>
+                    <div class="depoimento">
+                        <img src="img/GeovanaAndrade.jpg" alt="Instrutora Geovana" class="foto-professor">
+                        <h3>Inst. Geovana</h3>
+                        <p>"Fui professora no Pensamento Computacional e, durante minha experiência, tive a oportunidade
+                            de contribuir para a formação de jovens do ensino médio no
+                            aprendizado de lógica de programação e programação básica. O curso, gratuito e acessível,
+                            foi uma oportunidade única de levar conhecimento a estudantes
+                            que, de outra forma, poderiam não ter acesso tão facilitado a essas ferramentas. Isso também
+                            contribui para colocar os alunos em contato com a área de
+                            tecnologia, onde eles podem descobrir afinidade e seguir carreira.
+                            <br>
+                            O impacto desse projeto foi transformador, tanto para os alunos quanto para mim. Ver o
+                            progresso e a curiosidade dos estudantes ao longo do curso foi
+                            extremamente gratificante e reforçou a importância de iniciativas que democratizam o ensino
+                            de tecnologia. Foi muito enriquecedor participar desse
+                            processo de construção de habilidades, não só técnicas, mas também de pensamento crítico e
+                            resolução de problemas.
+                            <br>
+                            Essa experiência também foi essencial para o meu próprio desenvolvimento, tanto no campo
+                            educacional quanto na compreensão do poder que a tecnologia tem
+                            para abrir novas perspectivas. Acredito que projetos como esse desempenham um papel
+                            fundamental ao proporcionar oportunidades de aprendizado e
+                            crescimento, preparando jovens para enfrentar os desafios do futuro."
+                        </p>
+                    </div>
+                    <div class="depoimento">
+                        <img src="img/MatheusVininius.jpg" alt="Instrutor Matheus" class="foto-professor">
+                        <h3>Inst. Matheus</h3>
+                        <p>"Minha experiência como professor nesse projeto foi extremamente gratificante. Enquanto
+                            ensinava conceitos e tecnologias atuais do mercado, também pude
+                            aprofundar meu conhecimento em tópicos importantes, com foco sempre nos fundamentos. Essa
+                            busca por entender melhor esses fundamentos me motivou a
+                            procurar novas ideias e inovações para compartilhar com meus alunos. O aprendizado foi uma
+                            via de mão dupla: cada interação e questionamento em sala de
+                            aula me ajudou a crescer profissional e pessoalmente. Essa troca de experiências tornou tudo
+                            ainda mais enriquecedor."
+                        </p>
+                    </div>
+                    <div class="depoimento">
+                        <img src="img/RenataGransoti.jpg" alt="Instrutora Renata" class="foto-professor">
+                        <h3>Inst. Renata</h3>
+                        <p>"Fui monitora em 2022 e instrutora em 2023 e 2024, foi uma experiência muito boa, onde
+                            consegui ensinar lógica de programação e como pensar
+                            computacionalmente. Consegui ver a evolução dos alunos no decorrer do curso e é muito
+                            gratificante saber que contribui através do ensino e uso
+                            de tecnologias na vida deles."
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    
-    <div class="aluno-destaque">
-        <img src="img/Angelo.jpg" alt="Aluno Angelo" class="foto">
-        <div class="texto">
-            <h3>Aluno Destaque: Angelo</h3>
-            <p>Se destacou pela curiosidade, empatia e entrega no projeto!</p>
+
+        <div class="aluno-destaque">
+            <img src="img/Angelo.jpg" alt="Aluno Angelo" class="foto">
+            <div class="texto">
+                <h3>Aluno Destaque: Angelo</h3>
+                <p>Se destacou pela curiosidade, empatia e entrega no projeto!</p>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section id="monitores">
-<div class="monitores-container">
+    <section id="monitores">
+        <div class="monitores-container">
 
-<div class="papel-monitores">
-    <h2>Papel dos monitores</h2>
-    <p>Os monitores desempenham um papel fundamental na sala de aula. Eles estão presentes em todas as aulas
-    para garantir que os alunos tenham o suporte necessário durante o aprendizado. Seu principal
-    objetivo é tirar dúvidas, auxiliar no entendimento dos conteúdos e facilitar a aplicação prática dos conceitos.
-    </p>
-    <p>Além disso, os monitores estão disponíveis para dar orientação individualizada, ajudando os alunos a
-    superarem desafios específicos, seja durante a escrita de código, na organização dos projetos ou na
-    resolução de problemas.
-    </p>
-    <p>Os monitores também desempenham um papel importante em motivar os alunos, incentivando-os a
-    persistirem mesmo diante de dificuldades, e celebrando suas conquistas ao longo do curso.
-    </p>
-</div>
+            <div class="papel-monitores">
+                <h2>Papel dos monitores</h2>
+                <p>Os monitores desempenham um papel fundamental na sala de aula. Eles estão presentes em todas as aulas
+                    para garantir que os alunos tenham o suporte necessário durante o aprendizado. Seu principal
+                    objetivo é tirar dúvidas, auxiliar no entendimento dos conteúdos e facilitar a aplicação prática dos
+                    conceitos.
+                </p>
+                <p>Além disso, os monitores estão disponíveis para dar orientação individualizada, ajudando os alunos a
+                    superarem desafios específicos, seja durante a escrita de código, na organização dos projetos ou na
+                    resolução de problemas.
+                </p>
+                <p>Os monitores também desempenham um papel importante em motivar os alunos, incentivando-os a
+                    persistirem mesmo diante de dificuldades, e celebrando suas conquistas ao longo do curso.
+                </p>
+            </div>
 
-<div class="carrossel-monitores">
-    <div class="monitores-wrapper">
-    <div class="monitor-card active">
-        <div class="card-content">
-        <img src="caminho/monitor1.jpg" alt="Monitor João" class="foto-monitor">
-        <h3 class="nome-monitor">Eduardo Luis Alonso</h3>
-        <p class="relato-monitor">"A programação, para eles, ainda é um universo novo e eu me sinto parte da missão de guiá-los por esse caminho."</p>
+            <div class="carrossel-monitores">
+                <div class="monitores-wrapper">
+                    <div class="monitor-card active">
+                        <div class="card-content">
+                            <img src="caminho/monitor1.jpg" alt="Monitor João" class="foto-monitor">
+                            <h3 class="nome-monitor">Eduardo Luis Alonso</h3>
+                            <p class="relato-monitor">"A programação, para eles, ainda é um universo novo e eu me sinto
+                                parte da missão de guiá-los por esse caminho."</p>
+                        </div>
+                    </div>
+
+                    <div class="monitor-card">
+                        <div class="card-content">
+                            <img src="caminho/monitor2.jpg" alt="Monitor Maria" class="foto-monitor">
+                            <h3 class="nome-monitor">Juliana Furlan Costa</h3>
+                            <p class="relato-monitor">"Ver alguém transformar lógica em criatividade com programação é
+                                uma das partes mais gratificantes desse papel."</p>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
         </div>
-    </div>
+    </section>
 
-    <div class="monitor-card">
-        <div class="card-content">
-        <img src="caminho/monitor2.jpg" alt="Monitor Maria" class="foto-monitor">
-        <h3 class="nome-monitor">Juliana Furlan Costa</h3>
-        <p class="relato-monitor">"Ver alguém transformar lógica em criatividade com programação é uma das partes mais gratificantes desse papel."</p>
-        </div>
-    </div>
-    </div>
-
-
-</div>
-
-</div>
-</section>
-
-<section id="horarios">
+    <section id="horarios">
         <div class="horario-calendario-wrapper">
             <!-- Container de Horários -->
             <div class="horario-container">
@@ -295,90 +295,90 @@
                 </table>
             </div>
         </div>
-</section>
+    </section>
 
-<section id="modulos">
-    <div class="modulos-container">
-        <h2 class="titulo-modulos">Módulos do Pensamento Computacional</h2> 
-        <div class="modulos-grid"> 
-            <div class="modulo" onclick="window.location.href='modulo1.html'">
-                <h3 class="titulo-modulo">Módulo I</h3>
-                <p>Programação em Bloco</p>
-                <img src="img/programacao_em_bloco.png" alt="Programação em Bloco" loading="lazy">
-            </div>
+    <section id="modulos">
+        <div class="modulos-container">
+            <h2 class="titulo-modulos">Módulos do Pensamento Computacional</h2>
+            <div class="modulos-grid">
+                <div class="modulo" onclick="window.location.href='modulo1.html'">
+                    <h3 class="titulo-modulo">Módulo I</h3>
+                    <p>Programação em Bloco</p>
+                    <img src="img/programacao_em_bloco.png" alt="Programação em Bloco" loading="lazy">
+                </div>
 
-            <div class="modulo" onclick="window.location.href='modulo2.html'">
-                <h3 class="titulo-modulo">Módulo II</h3>
-                <p>HTML e CSS</p>
-                <img src="img/html_css.png" alt="HTML e CSS" loading="lazy">
-            </div>
+                <div class="modulo" onclick="window.location.href='modulo2.html'">
+                    <h3 class="titulo-modulo">Módulo II</h3>
+                    <p>HTML e CSS</p>
+                    <img src="img/html_css.png" alt="HTML e CSS" loading="lazy">
+                </div>
 
-            <div class="modulo" onclick="window.location.href='modulo3.html'">
-                <h3 class="titulo-modulo">Módulo III</h3>
-                <p>JavaScript</p>
-                <img src="img/javascript.png" alt="JavaScript" loading="lazy">
-            </div>
+                <div class="modulo" onclick="window.location.href='modulo3.html'">
+                    <h3 class="titulo-modulo">Módulo III</h3>
+                    <p>JavaScript</p>
+                    <img src="img/javascript.png" alt="JavaScript" loading="lazy">
+                </div>
 
-            <div class="modulo" onclick="window.location.href='modulo4.html'">
-                <h3 class="titulo-modulo">Módulo IV</h3>
-                <p>Programação de um jogo web com HTML CSS e Javascript</p>
-                <img src="img/front.png" alt="Jogo web" loading="lazy">
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="fotos">
-    <div class="cabecalho-galeria">
-        <h2 class="titulo-galeria">Galeria de Fotos</h2>
-        <p class="subtitulo-galeria">Reviva os melhores momentos de cada ano</p>
-        
-        <div class="navegacao-anos">
-            <button class="ano-btn" data-ano="2022">2022</button>
-            <button class="ano-btn" data-ano="2023">2023</button>
-            <button class="ano-btn" data-ano="2024">2024</button>
-            <button class="ano-btn ativo" data-ano="2025">2025</button>
-        </div>
-    </div>
-
-
-    <div class="galeria-anos">
-        <!-- Ano 2022 -->
-        <div class="ano-container" id="ano-2022">
-            <div class="header-ano">
-                <h3>2022</h3>
-            </div>
-            <div class="carrossel-galeria" id="carrossel-2022">
+                <div class="modulo" onclick="window.location.href='modulo4.html'">
+                    <h3 class="titulo-modulo">Módulo IV</h3>
+                    <p>Programação de um jogo web com HTML CSS e Javascript</p>
+                    <img src="img/front.png" alt="Jogo web" loading="lazy">
+                </div>
             </div>
         </div>
-        
-        <!-- Ano 2023 -->
-        <div class="ano-container" id="ano-2023">
-            <div class="header-ano">
-                <h3>2023</h3>
-            </div>
-            <div class="carrossel-galeria" id="carrossel-2023">
+    </section>
+
+    <section id="fotos">
+        <div class="cabecalho-galeria">
+            <h2 class="titulo-galeria">Galeria de Fotos</h2>
+            <p class="subtitulo-galeria">Reviva os melhores momentos de cada ano</p>
+
+            <div class="navegacao-anos">
+                <button class="ano-btn" data-ano="2022">2022</button>
+                <button class="ano-btn" data-ano="2023">2023</button>
+                <button class="ano-btn" data-ano="2024">2024</button>
+                <button class="ano-btn ativo" data-ano="2025">2025</button>
             </div>
         </div>
 
-        <!-- Ano 2024 -->
-        <div class="ano-container" id="ano-2024">
-            <div class="header-ano">
-                <h3>2024</h3>
-            </div>
-            <div class="carrossel-galeria" id="carrossel-2024">
-            </div>
-        </div>
 
-        <!-- Ano 2025 -->
-        <div class="ano-container ativo" id="ano-2025">
-            <div class="header-ano">
-                <h3>2025</h3>
+        <div class="galeria-anos">
+            <!-- Ano 2022 -->
+            <div class="ano-container" id="ano-2022">
+                <div class="header-ano">
+                    <h3>2022</h3>
+                </div>
+                <div class="carrossel-galeria" id="carrossel-2022">
+                </div>
             </div>
-            <div class="carrossel-galeria" id="carrossel-2025">
+
+            <!-- Ano 2023 -->
+            <div class="ano-container" id="ano-2023">
+                <div class="header-ano">
+                    <h3>2023</h3>
+                </div>
+                <div class="carrossel-galeria" id="carrossel-2023">
+                </div>
+            </div>
+
+            <!-- Ano 2024 -->
+            <div class="ano-container" id="ano-2024">
+                <div class="header-ano">
+                    <h3>2024</h3>
+                </div>
+                <div class="carrossel-galeria" id="carrossel-2024">
+                </div>
+            </div>
+
+            <!-- Ano 2025 -->
+            <div class="ano-container ativo" id="ano-2025">
+                <div class="header-ano">
+                    <h3>2025</h3>
+                </div>
+                <div class="carrossel-galeria" id="carrossel-2025">
+                </div>
             </div>
         </div>
-    </div>
 
         <!-- Lightbox Mobile -->
         <div class="lightbox-mobile">
@@ -391,55 +391,58 @@
                 </div>
             </div>
         </div>
-</section>
+    </section>
 
-<section class="link-unifil-box">
-    <h3>Quer saber mais?</h3>
-    <p>
-        Visite o site oficial da UniFil para mais informações sobre o curso de Pensamento Computacional e outras oportunidades educacionais.
-    </p>
-    <a href="https://www.unifil.br" target="_blank" class="botao-site">
-        Acessar site da UniFil
-    </a>
-</section>
+    <section class="link-unifil-box">
+        <h3>Quer saber mais?</h3>
+        <p>
+            Visite o site oficial da UniFil para mais informações sobre o curso de Pensamento Computacional e outras
+            oportunidades educacionais.
+        </p>
+        <a href="https://www.unifil.br" target="_blank" class="botao-site">
+            Acessar site da UniFil
+        </a>
+    </section>
 
-<footer>
-    <div class="footer-content">
-        <div class="footer-logo">
-            <a href="https://www.unifil.br" target="_blank">
-                <img src="img/logo-unifil2.png" alt="Logo da Unifil" class="logo-footer">
-            </a>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <a href="https://www.unifil.br" target="_blank">
+                    <img src="img/logo-unifil2.png" alt="Logo da Unifil" class="logo-footer">
+                </a>
+            </div>
+            <div class="footer-nav-container">
+                <nav class="footer-nav">
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="#homenagens">Depoimento Instrutores</a></li>
+                        <li><a href="#monitores">Monitores</a></li>
+                        <li><a href="#horarios">Horários</a></li>
+                        <li><a href="#modulos">Módulos</a></li>
+                        <li><a href="#fotos">Galeria</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="redes-sociais">
+                <a href="https://www.instagram.com/unifillondrina?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                    target="_blank"><img src="img/instagram.png" alt="Instagram"></a>
+                <a href="https://x.com/unifiloficial" target="_blank"><img src="img/twitter.png" alt="X"></a>
+                <a href="https://www.facebook.com/UnifilLondrinafanpage/?locale=pt_BR" target="_blank"><img
+                        src="img/facebook.png" alt="Facebook"></a>
+                <a href="https://www.tiktok.com/@unifillondrina?is_from_webapp=1&sender_device=pc" target="_blank"><img
+                        src="img/tiktok.png" alt="Tiktok"></a>
+            </div>
         </div>
-        <div class="footer-nav-container">
-            <nav class="footer-nav">
-                <ul>
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="#homenagens">Depoimento Instrutores</a></li>
-                    <li><a href="#monitores">Monitores</a></li>
-                    <li><a href="#horarios">Horários</a></li>
-                    <li><a href="#modulos">Módulos</a></li>
-                    <li><a href="#fotos">Galeria</a></li>
-                </ul>
-            </nav>
+        <div class="footer-direitos">
+            © 2025 UniFil. Todos os direitos reservados.
         </div>
-        <div class="redes-sociais">
-            <a href="https://www.instagram.com/unifillondrina?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><img src="img/instagram.png" alt="Instagram"></a>
-            <a href="https://x.com/unifiloficial" target="_blank"><img src="img/twitter.png" alt="X"></a>
-            <a href="https://www.facebook.com/UnifilLondrinafanpage/?locale=pt_BR" target="_blank"><img src="img/facebook.png" alt="Facebook"></a>
-            <a href="https://www.tiktok.com/@unifillondrina?is_from_webapp=1&sender_device=pc" target="_blank"><img src="img/tiktok.png" alt="Tiktok"></a>
-        </div>
-    </div>
-    <div class="footer-direitos">
-        © 2025 UniFil. Todos os direitos reservados.
-    </div>
-</footer>
+    </footer>
 
-<div class="menu-overlay"></div>
+    <div class="menu-overlay"></div>
 
-<script src="/RecordacoesPC/script.js"></script>
-<script src="/RecordacoesPC/galeria-data.js" defer></script>
-<script src="/RecordacoesPC/galeria-loader.js" defer></script>
-<script src="/RecordacoesPC/paginacao-galeria.js" defer></script>
-<script src="/RecordacoesPC/carregar-mais.js" defer></script>
+    <script type="module" src="javascript/main.js"></script>
+    <script src="galeria-data.js" defer></script>
+    <script src="galeria-loader.js" defer></script>
 </body>
+
 </html>

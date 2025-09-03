@@ -1,0 +1,116 @@
+#pensamento,
+#porque-fazer {
+    background-color: #f4f4f4;
+    padding: 50px;
+    text-align: center;
+}
+
+.pensamento-box {
+    background-color: #d9d5d4;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    max-width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    transition:
+        background-color 1.0s ease,
+        transform 0.5s ease,
+        box-shadow 0.5s ease;
+}
+
+.pensamento-box.active {
+    background-color: orange;
+}
+
+.pensamento-box:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.pensamento-box h2 {
+    font-size: 40px;
+    color: #000;
+    margin-bottom: 30px;
+}
+
+.pensamento-box p {
+    font-size: 24px;
+    color: #000;
+    line-height: 1.6;
+    text-align: justify;
+    padding: 0px 20px 20px 20px;
+}
+
+@media (max-width: 1200px) {
+    .pensamento-box {
+        max-width: 90%;
+    }
+    
+    .pensamento-box h2 {
+        font-size: 36px;
+    }
+    
+    .pensamento-box p {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 992px) {
+    #pensamento,
+    #porque-fazer {
+        padding: 40px 30px;
+    }
+    
+    .pensamento-box {
+        padding: 25px;
+    }
+    
+    .pensamento-box h2 {
+        font-size: 32px;
+        margin-bottom: 25px;
+    }
+    
+    .pensamento-box p {
+        font-size: 20px;
+        padding: 0 15px 15px 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .pensamento-box {
+        max-width: 95%;
+    }
+    
+    .pensamento-box h2 {
+        font-size: 28px;
+    }
+    
+    .pensamento-box p {
+        font-size: 18px;
+        line-height: 1.5;
+    }
+}
+
+@media (max-width: 576px) {
+    #pensamento,
+    #porque-fazer {
+        padding: 30px 15px;
+    }
+    
+    .pensamento-box {
+        padding: 20px;
+        border-radius: 6px;
+    }
+    
+    .pensamento-box h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    
+    .pensamento-box p {
+        text-align: justify;
+        hyphens: auto;
+    }
+}

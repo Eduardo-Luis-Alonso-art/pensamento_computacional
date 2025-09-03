@@ -1,0 +1,188 @@
+#horarios {
+    padding: 40px 5%;
+    background-color: orange;
+}
+
+.horario-calendario-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.horario-container, 
+.calendario-container {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.2),
+                0 15px 20px -10px rgba(0, 0, 0, 0.15);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.horario-container {
+    width: 100%;
+}
+
+.calendario-container {
+    width: 70%;
+}
+
+.horario-container h3,
+.calendario-container h3 {
+    color: #000;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
+}
+
+.tabela-horarios,
+.calendario-tabela {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    font-size: clamp(14px, 1.5vw, 16px);
+}
+
+.tabela-horarios th {
+    background-color: orange;
+    color: white;
+    padding: 12px 8px;
+    text-align: left;
+}
+
+.calendario-tabela th {
+    background-color: #ff8c00;
+    color: #fff;
+    padding: 10px 5px;
+    font-size: clamp(12px, 1.3vw, 14px);
+}
+
+.tabela-horarios td {
+    padding: 10px 8px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.calendario-tabela td {
+    padding: 8px 5px;
+    height: 35px;
+}
+
+.calendario-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 0 5px;
+}
+
+.calendario-button {
+    background: #f8f9fa;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    width: 35px;
+    height: 35px;
+    color: #495057;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.calendario-button:hover {
+    background: orange;
+    color: white;
+    border-color: #eb922e;
+    transform: scale(1.05);
+}
+
+.calendario-button:active {
+    transform: scale(0.95);
+}
+
+#month-name {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    min-width: 120px;
+}
+
+@media (max-width: 991px) {
+    .horario-calendario-wrapper {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .calendario-container {
+        width: 100%;
+    }
+    
+    .tabela-horarios,
+    .calendario-tabela {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 767px) {
+    #horarios {
+        padding: 30px 15px;
+    }
+    
+    .horario-container,
+    .calendario-container {
+        padding: 20px 15px;
+    }
+    
+    .tabela-horarios th,
+    .tabela-horarios td {
+        padding: 8px 6px;
+    }
+    
+    .calendario-tabela td {
+        padding: 6px 3px;
+        height: 30px;
+    }
+    
+    .tabela-horarios thead {
+        display: none;
+    }
+    
+    .tabela-horarios tr {
+        display: block;
+        margin-bottom: 10px;
+        border-bottom: 2px solid #ddd;
+    }
+    
+    .tabela-horarios td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px;
+        text-align: right;
+    }
+    
+    .tabela-horarios td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        margin-right: 10px;
+        text-align: left;
+    }
+}
+
+@media (max-width: 480px) {
+    .calendario-nav button {
+        width: 25px;
+        height: 25px;
+    }
+    
+    #month-name {
+        min-width: 100px;
+    }
+    
+    .calendario-tabela th,
+    .calendario-tabela td {
+        padding: 4px 2px;
+        font-size: 12px;
+    }
+}
