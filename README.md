@@ -14,7 +14,7 @@ Este repositório reúne conteúdos, exemplos, projetos e recursos utilizados no
 
 O projeto está hospedado temporariamente neste link:
 
-[https://eduardo-luis-alonso-art.github.io/RecordacoesPC/](https://eduardo-luis-alonso-art.github.io/RecordacoesPC/)
+[https://eduardo-luis-alonso-art.github.io/RecordacoesPC/](https://eduardo-luis-alonso-art.github.io/pensamento_computacional/)
 
 ---
 
@@ -32,6 +32,7 @@ O projeto está hospedado temporariamente neste link:
 1. Clone o repositório:  
    ```bash
    git clone https://github.com/eduardo-luis-alonso-art/RecordacoesPC.git
+
 
 
 
